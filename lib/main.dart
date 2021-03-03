@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'pages/page1_page.dart';
+import 'pages/page2_page.dart';
+import 'pages/page3_page.dart';
+import 'pages/page4_page.dart';
+import 'pages/page5_page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -84,60 +90,5 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _currentIndex = index;
     });
-  }
-}
-
-class Page1 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: Text('page1'),
-      alignment: Alignment.center,
-    );
-  }
-}
-
-class Page2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.yellow,
-      child: Text('page2'),
-      alignment: Alignment.center,
-    );
-  }
-}
-
-class Page3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      child: Text('page3'),
-      alignment: Alignment.center,
-    );
-  }
-}
-
-class Page4 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.teal,
-      child: Text('page4'),
-      alignment: Alignment.center,
-    );
-  }
-}
-
-class Page5 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purple,
-      child: Text('page5'),
-      alignment: Alignment.center,
-    );
   }
 }
