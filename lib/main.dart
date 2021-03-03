@@ -93,6 +93,7 @@ class Page1 extends StatelessWidget {
     return Container(
       color: Colors.red,
       child: Text('page1'),
+      alignment: Alignment.center,
     );
   }
 }
@@ -103,6 +104,7 @@ class Page2 extends StatelessWidget {
     return Container(
       color: Colors.yellow,
       child: Text('page2'),
+      alignment: Alignment.center,
     );
   }
 }
@@ -113,6 +115,7 @@ class Page3 extends StatelessWidget {
     return Container(
       color: Colors.amber,
       child: Text('page3'),
+      alignment: Alignment.center,
     );
   }
 }
@@ -123,6 +126,7 @@ class Page4 extends StatelessWidget {
     return Container(
       color: Colors.teal,
       child: Text('page4'),
+      alignment: Alignment.center,
     );
   }
 }
@@ -131,8 +135,9 @@ class Page5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.teal,
+      color: Colors.purple,
       child: Text('page5'),
+      alignment: Alignment.center,
     );
   }
 }
