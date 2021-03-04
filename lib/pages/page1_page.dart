@@ -28,7 +28,8 @@ class Page6 extends StatelessWidget {
     return Container(
       color: Colors.red,
       alignment: Alignment.center,
-      child: Row(// 1行目
+      child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
         Center(
           child: ElevatedButton(
