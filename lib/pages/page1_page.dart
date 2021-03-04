@@ -5,8 +5,15 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.red,
-      child: Text('page1'),
       alignment: Alignment.center,
+      child: Center(
+        child: ElevatedButton(
+          child: Text('placetice1'),
+          onPressed: () {
+            //
+          },
+        ),
+      ),
     );
   }
 }
