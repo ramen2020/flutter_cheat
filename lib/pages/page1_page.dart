@@ -56,6 +56,12 @@ class Page6 extends StatelessWidget {
                 },
               ),
             ),
+            ElevatedButton(
+              onPressed: null,
+              child: Text(
+                "これは押せないボタン",
+              ),
+            ),
           ]),
     );
   }
