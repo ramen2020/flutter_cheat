@@ -10,6 +10,7 @@ class Page1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // 画面遷移
             ElevatedButton(
               child: Text('placetice1'),
               onPressed: () {
@@ -20,6 +21,7 @@ class Page1 extends StatelessWidget {
                     ));
               },
             ),
+            // アラート・ダイアログ
             ElevatedButton(
                 child: Text(
                   'アラート',
@@ -28,7 +30,6 @@ class Page1 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () async {
-                  // ダイアログを表示------------------------------------
                   await showDialog<int>(
                     context: context,
                     barrierDismissible: false,
