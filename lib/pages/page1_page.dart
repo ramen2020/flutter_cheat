@@ -20,6 +20,36 @@ class Page1 extends StatelessWidget {
                     ));
               },
             ),
+            ElevatedButton(
+                child: Text(
+                  'アラート',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onPressed: () async {
+                  // ダイアログを表示------------------------------------
+                  await showDialog<int>(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text('でましたよん'),
+                        content: Text('ダイアログ出動！'),
+                        actions: <Widget>[
+                          ElevatedButton(
+                            child: Text('Cancel'),
+                            onPressed: () => Navigator.of(context).pop(0),
+                          ),
+                          ElevatedButton(
+                            child: Text('OK'),
+                            onPressed: () => Navigator.of(context).pop(1),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }),
           ]),
     );
   }
