@@ -26,9 +26,12 @@ class Page1 extends StatelessWidget {
                 child: Text(
                   'アラート',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.red,
                   ),
                 ),
+                              style: ElevatedButton.styleFrom(
+                primary: Colors.yellow, //ボタンの背景色
+              ),
                 onPressed: () async {
                   await showDialog<int>(
                     context: context,
