@@ -32,8 +32,7 @@ class Page6 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Center(
-              child: ElevatedButton(
+            ElevatedButton(
                 child: Text(
                   '遷移しました',
                   style: TextStyle(
@@ -46,16 +45,13 @@ class Page6 extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-            ),
-            Center(
-              child: ElevatedButton(
+            ElevatedButton(
                 child: Text('戻る'),
                 onPressed: () {
                   // 1つ前に戻る
                   Navigator.pop(context);
                 },
               ),
-            ),
             ElevatedButton(
               onPressed: null,
               child: Text(
