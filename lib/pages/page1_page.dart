@@ -90,6 +90,7 @@ class Page1 extends StatelessWidget {
                       });
                 }),
 
+            // ハーフモーダル
             ElevatedButton(
                 child: const Text('ハーフモーダル'),
                 onPressed: () {
