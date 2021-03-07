@@ -65,8 +65,29 @@ class Page1 extends StatelessWidget {
                   primary: Colors.yellow,
                 ),
                 onPressed: () async {
-                  //
-                }),
+                  await showDialog<int>(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return SimpleDialog(
+                          title: Text('確認'),
+                          children: <Widget>[
+                            SimpleDialogOption(
+                              onPressed: () => Navigator.pop(context, 1),
+                              child: const Text('選択肢1'),
+                            ),
+                            SimpleDialogOption(
+                              onPressed: () => Navigator.pop(context, 2),
+                              child: const Text('選択肢2'),
+                            ),
+                            SimpleDialogOption(
+                              onPressed: () => Navigator.pop(context, 3),
+                              child: const Text('選択肢3'),
+                            ),
+                          ],
+                        );
+                      });
+                })
           ]),
     );
   }
