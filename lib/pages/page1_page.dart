@@ -21,7 +21,7 @@ class Page1 extends StatelessWidget {
                     ));
               },
             ),
-            // アラート・ダイアログ
+            // アラート　AlertDialog
             ElevatedButton(
                 child: Text(
                   'AlertDialog',
@@ -54,6 +54,7 @@ class Page1 extends StatelessWidget {
                     },
                   );
                 }),
+            // アラート　SimpleDialog
             ElevatedButton(
                 child: Text(
                   'SimpleDialog',
