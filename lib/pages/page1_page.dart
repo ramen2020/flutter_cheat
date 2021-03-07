@@ -88,7 +88,34 @@ class Page1 extends StatelessWidget {
                           ],
                         );
                       });
-                })
+                }),
+
+            ElevatedButton(
+                child: const Text('ハーフモーダル'),
+                onPressed: () {
+                  Scaffold.of(context).showBottomSheet<void>(
+                    (BuildContext context) {
+                      return Container(
+                        height: 200,
+                        color: Colors.white,
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text('ハーフモーダル'),
+                              ElevatedButton(
+                                  child: const Text('シートを閉じる'),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  })
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                }),
           ]),
     );
   }
