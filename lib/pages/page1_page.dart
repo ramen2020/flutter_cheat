@@ -29,9 +29,9 @@ class Page1 extends StatelessWidget {
                     color: Colors.red,
                   ),
                 ),
-                              style: ElevatedButton.styleFrom(
-                primary: Colors.yellow, //ボタンの背景色
-              ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.yellow, //ボタンの背景色
+                ),
                 onPressed: () async {
                   await showDialog<int>(
                     context: context,
@@ -53,6 +53,19 @@ class Page1 extends StatelessWidget {
                       );
                     },
                   );
+                }),
+            ElevatedButton(
+                child: Text(
+                  'SimpleDialog',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.yellow,
+                ),
+                onPressed: () async {
+                  //
                 }),
           ]),
     );
