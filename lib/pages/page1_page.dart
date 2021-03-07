@@ -90,14 +90,17 @@ class Page1 extends StatelessWidget {
                       });
                 }),
 
-            // ハーフモーダル
+            // ハーフモーダル showBottomSheet
             ElevatedButton(
-                child: const Text('ハーフモーダル'),
+                child: const Text('showBottomSheet'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[300],
+                ),
                 onPressed: () {
                   Scaffold.of(context).showBottomSheet<void>(
                     (BuildContext context) {
                       return Container(
-                        height: 200,
+                        height: 500,
                         color: Colors.white,
                         child: Center(
                           child: Column(
@@ -117,6 +120,37 @@ class Page1 extends StatelessWidget {
                     },
                   );
                 }),
+
+            // ハーフモーダル showModalBottomSheet
+            ElevatedButton(
+                child: const Text('showModalBottomSheet'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[300],
+                ),
+                onPressed: () {
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 400,
+                        color: Colors.lightBlue[200],
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text('showModalBottomSheet'),
+                              ElevatedButton(
+                                child: const Text('閉じる'),
+                                onPressed: () => Navigator.pop(context),
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                })
           ]),
     );
   }
