@@ -24,7 +24,7 @@ class Page1 extends StatelessWidget {
             // アラート・ダイアログ
             ElevatedButton(
                 child: Text(
-                  'アラート',
+                  'AlertDialog',
                   style: TextStyle(
                     color: Colors.red,
                   ),
@@ -38,7 +38,7 @@ class Page1 extends StatelessWidget {
                     barrierDismissible: false,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('でましたよん'),
+                        title: Text('AlertDialog'),
                         content: Text('ダイアログ出動！'),
                         actions: <Widget>[
                           ElevatedButton(
