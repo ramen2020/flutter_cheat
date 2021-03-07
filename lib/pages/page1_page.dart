@@ -70,19 +70,19 @@ class Page1 extends StatelessWidget {
                       barrierDismissible: false,
                       builder: (BuildContext context) {
                         return SimpleDialog(
-                          title: Text('確認'),
+                          title: Text('何が好きですか？'),
                           children: <Widget>[
                             SimpleDialogOption(
                               onPressed: () => Navigator.pop(context, 1),
-                              child: const Text('選択肢1'),
+                              child: const Text('ラーメン'),
                             ),
                             SimpleDialogOption(
                               onPressed: () => Navigator.pop(context, 2),
-                              child: const Text('選択肢2'),
+                              child: const Text('焼肉'),
                             ),
                             SimpleDialogOption(
                               onPressed: () => Navigator.pop(context, 3),
-                              child: const Text('選択肢3'),
+                              child: const Text('白菜'),
                             ),
                           ],
                         );
