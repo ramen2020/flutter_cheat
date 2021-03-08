@@ -22,6 +22,7 @@
 
 # Flutter/Dart/Pub related
 **/doc/api/
+full_speed.sh
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
