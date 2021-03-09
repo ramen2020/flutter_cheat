@@ -152,7 +152,23 @@ class Page1 extends StatelessWidget {
                     },
                   );
                 }),
-            // アラート cupertino 
+
+            ElevatedButton(
+                child: const Text('cupertino'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[300],
+                ),
+                onPressed: () async {
+                  showAboutDialog(
+                    context: context,
+                    applicationIcon: Icon(Icons.photo),
+                    applicationName: "アプリ名",
+                    applicationVersion: "2.0.1",
+                    applicationLegalese: "あいうえお",
+                  );
+                }),
+
+            // アラート cupertino あまり使用するのは良くない。
             ElevatedButton(
                 child: const Text('cupertino'),
                 style: ElevatedButton.styleFrom(
