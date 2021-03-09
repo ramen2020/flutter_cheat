@@ -152,9 +152,9 @@ class Page1 extends StatelessWidget {
                     },
                   );
                 }),
-            // ハーフモーダル showBottomSheet
+            // アラート cupertino 
             ElevatedButton(
-                child: const Text('showBottomSheet'),
+                child: const Text('cupertino'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green[300],
                 ),
