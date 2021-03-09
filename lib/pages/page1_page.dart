@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class Page1 extends StatelessWidget {
   @override
@@ -150,7 +151,36 @@ class Page1 extends StatelessWidget {
                       );
                     },
                   );
-                })
+                }),
+            // ハーフモーダル showBottomSheet
+            ElevatedButton(
+                child: const Text('showBottomSheet'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[300],
+                ),
+                onPressed: () async {
+                  await showDialog<int>(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (BuildContext context) {
+                      return CupertinoAlertDialog(
+                        title: Text("タイトル"),
+                        content: Text("メッセージ"),
+                        actions: <Widget>[
+                          CupertinoDialogAction(
+                            child: Text("Delete"),
+                            isDestructiveAction: true,
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                          CupertinoDialogAction(
+                            child: Text("OK"),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }),
           ]),
     );
   }
