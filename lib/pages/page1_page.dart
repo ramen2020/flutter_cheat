@@ -153,8 +153,9 @@ class Page1 extends StatelessWidget {
                   );
                 }),
 
+            // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
             ElevatedButton(
-                child: const Text('cupertino'),
+                child: const Text('CupertinoDialog'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green[300],
                 ),
@@ -168,9 +169,9 @@ class Page1 extends StatelessWidget {
                   );
                 }),
 
-            // アラート cupertino あまり使用するのは良くない。
+            // アラート CupertinoDialog あまり使用するのは良くない。
             ElevatedButton(
-                child: const Text('cupertino'),
+                child: const Text('CupertinoDialog'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green[300],
                 ),
