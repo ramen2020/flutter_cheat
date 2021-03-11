@@ -13,7 +13,7 @@ class Page1 extends StatelessWidget {
           children: <Widget>[
             // 画面遷移
             ElevatedButton(
-              child: Text('placetice1'),
+              child: Text('button'),
               onPressed: () {
                 Navigator.push(
                     context,
@@ -91,6 +91,62 @@ class Page1 extends StatelessWidget {
                       });
                 }),
 
+            // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
+            ElevatedButton(
+                child: const Text(
+                  'AboutDialog',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.yellow,
+                ),
+                onPressed: () async {
+                  showAboutDialog(
+                    context: context,
+                    applicationIcon: Icon(Icons.photo),
+                    applicationName: "アプリ名",
+                    applicationVersion: "2.0.1",
+                    applicationLegalese: "あいうえお",
+                  );
+                }),
+
+            // CupertinoDialog あまり使用するのは良くない。
+            ElevatedButton(
+                child: const Text(
+                  'CupertinoDialog',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.yellow,
+                ),
+                onPressed: () async {
+                  await showDialog<int>(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (BuildContext context) {
+                      return CupertinoAlertDialog(
+                        title: Text("タイトル"),
+                        content: Text("メッセージ"),
+                        actions: <Widget>[
+                          CupertinoDialogAction(
+                            child: Text("Delete"),
+                            isDestructiveAction: true,
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                          CupertinoDialogAction(
+                            child: Text("OK"),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }),
+
             // ハーフモーダル showBottomSheet
             ElevatedButton(
                 child: const Text('showBottomSheet'),
@@ -148,52 +204,6 @@ class Page1 extends StatelessWidget {
                             ],
                           ),
                         ),
-                      );
-                    },
-                  );
-                }),
-
-            // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
-            ElevatedButton(
-                child: const Text('CupertinoDialog'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green[300],
-                ),
-                onPressed: () async {
-                  showAboutDialog(
-                    context: context,
-                    applicationIcon: Icon(Icons.photo),
-                    applicationName: "アプリ名",
-                    applicationVersion: "2.0.1",
-                    applicationLegalese: "あいうえお",
-                  );
-                }),
-
-            // アラート CupertinoDialog あまり使用するのは良くない。
-            ElevatedButton(
-                child: const Text('CupertinoDialog'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green[300],
-                ),
-                onPressed: () async {
-                  await showDialog<int>(
-                    context: context,
-                    barrierDismissible: false,
-                    builder: (BuildContext context) {
-                      return CupertinoAlertDialog(
-                        title: Text("タイトル"),
-                        content: Text("メッセージ"),
-                        actions: <Widget>[
-                          CupertinoDialogAction(
-                            child: Text("Delete"),
-                            isDestructiveAction: true,
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                          CupertinoDialogAction(
-                            child: Text("OK"),
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                        ],
                       );
                     },
                   );
