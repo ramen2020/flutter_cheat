@@ -208,6 +208,30 @@ class Page1 extends StatelessWidget {
                     },
                   );
                 }),
+
+            ElevatedButton(
+              child: Text('indicator'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.deepPurple,
+              ),
+              onPressed: () async {
+                // 全画面プログレスダイアログを表示
+                showGeneralDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    transitionDuration: Duration(milliseconds: 300),
+                    barrierColor: Colors.black.withOpacity(0.5),
+                    pageBuilder: (BuildContext context, Animation animation,
+                        Animation secondaryAnimation) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    });
+                // ３秒後にダイアログを閉じる
+                await Future.delayed(Duration(seconds: 3));
+                Navigator.of(context).pop();
+              },
+            ),
           ]),
     );
   }
