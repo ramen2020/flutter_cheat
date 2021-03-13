@@ -209,18 +209,18 @@ class Page1 extends StatelessWidget {
                   );
                 }),
 
+            // indicator
             ElevatedButton(
               child: Text('indicator'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepPurple,
               ),
               onPressed: () async {
-                // 全画面プログレスダイアログを表示
                 showGeneralDialog(
                     context: context,
-                    barrierDismissible: false,
-                    transitionDuration: Duration(milliseconds: 300),
-                    barrierColor: Colors.black.withOpacity(0.5),
+                    barrierDismissible: false, // 画面タップで閉じるを無効
+                    transitionDuration: Duration(milliseconds: 300), // フェードインアウト時間を300ms
+                    barrierColor: Colors.black.withOpacity(0.5), // 背景色
                     pageBuilder: (BuildContext context, Animation animation,
                         Animation secondaryAnimation) {
                       return Center(
