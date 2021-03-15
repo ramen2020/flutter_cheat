@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'pages/page1_page.dart';
-import 'pages/page2_page.dart';
-import 'pages/page3_page.dart';
-import 'pages/page4_page.dart';
-import 'pages/page5_page.dart';
-
+import 'screen/page1_screen.dart';
+import 'screen/page2_screen.dart';
+import 'screen/page3_screen.dart';
+import 'screen/page4_screen.dart';
+import 'screen/page5_screen.dart';
 
 void main() {
   runApp(MyApp());
