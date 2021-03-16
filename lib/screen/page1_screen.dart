@@ -23,38 +23,8 @@ class Page1 extends StatelessWidget {
               },
             ),
             // アラート　AlertDialog
-            ElevatedButton(
-                child: Text(
-                  'AlertDialog',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow, //ボタンの背景色
-                ),
-                onPressed: () async {
-                  await showDialog<int>(
-                    context: context,
-                    barrierDismissible: false,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text('AlertDialog'),
-                        content: Text('ダイアログ出動！'),
-                        actions: <Widget>[
-                          ElevatedButton(
-                            child: Text('Cancel'),
-                            onPressed: () => Navigator.of(context).pop(0),
-                          ),
-                          ElevatedButton(
-                            child: Text('OK'),
-                            onPressed: () => Navigator.of(context).pop(1),
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                }),
+            alertDialogButton(context),
+
             // アラート　SimpleDialog
             ElevatedButton(
                 child: Text(
@@ -219,7 +189,8 @@ class Page1 extends StatelessWidget {
                 showGeneralDialog(
                     context: context,
                     barrierDismissible: false, // 画面タップで閉じるを無効
-                    transitionDuration: Duration(milliseconds: 300), // フェードインアウト時間を300ms
+                    transitionDuration:
+                        Duration(milliseconds: 300), // フェードインアウト時間を300ms
                     barrierColor: Colors.black.withOpacity(0.5), // 背景色
                     pageBuilder: (BuildContext context, Animation animation,
                         Animation secondaryAnimation) {
@@ -235,6 +206,42 @@ class Page1 extends StatelessWidget {
           ]),
     );
   }
+}
+
+// アラート　AlertDialog
+Widget alertDialogButton(BuildContext context) {
+  return ElevatedButton(
+      child: Text(
+        'AlertDialog',
+        style: TextStyle(
+          color: Colors.red,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.yellow, //ボタンの背景色
+      ),
+      onPressed: () async {
+        await showDialog<int>(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('AlertDialog'),
+              content: Text('ダイアログ出動！'),
+              actions: <Widget>[
+                ElevatedButton(
+                  child: Text('Cancel'),
+                  onPressed: () => Navigator.of(context).pop(0),
+                ),
+                ElevatedButton(
+                  child: Text('OK'),
+                  onPressed: () => Navigator.of(context).pop(1),
+                ),
+              ],
+            );
+          },
+        );
+      });
 }
 
 class Page6 extends StatelessWidget {
