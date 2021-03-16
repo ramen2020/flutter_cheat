@@ -28,25 +28,7 @@ class Page1 extends StatelessWidget {
             simpleDialogButton(context),
 
             // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
-            ElevatedButton(
-                child: const Text(
-                  'AboutDialog',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
-                ),
-                onPressed: () async {
-                  showAboutDialog(
-                    context: context,
-                    applicationIcon: Icon(Icons.photo),
-                    applicationName: "アプリ名",
-                    applicationVersion: "2.0.1",
-                    applicationLegalese: "あいうえお",
-                  );
-                }),
+            aboutDialogButton(context),
 
             // CupertinoDialog あまり使用するのは良くない。
             ElevatedButton(
@@ -245,6 +227,29 @@ Widget simpleDialogButton(BuildContext context) {
                 ],
               );
             });
+      });
+}
+
+// AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
+Widget aboutDialogButton(BuildContext context) {
+  return ElevatedButton(
+      child: const Text(
+        'AboutDialog',
+        style: TextStyle(
+          color: Colors.red,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.yellow,
+      ),
+      onPressed: () async {
+        showAboutDialog(
+          context: context,
+          applicationIcon: Icon(Icons.photo),
+          applicationName: "アプリ名",
+          applicationVersion: "2.0.1",
+          applicationLegalese: "あいうえお",
+        );
       });
 }
 
