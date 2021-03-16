@@ -24,42 +24,8 @@ class Page1 extends StatelessWidget {
             ),
             // アラート　AlertDialog
             alertDialogButton(context),
-
             // アラート　SimpleDialog
-            ElevatedButton(
-                child: Text(
-                  'SimpleDialog',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
-                ),
-                onPressed: () async {
-                  await showDialog<int>(
-                      context: context,
-                      barrierDismissible: false,
-                      builder: (BuildContext context) {
-                        return SimpleDialog(
-                          title: Text('何が好きですか？'),
-                          children: <Widget>[
-                            SimpleDialogOption(
-                              onPressed: () => Navigator.pop(context, 1),
-                              child: const Text('ラーメン'),
-                            ),
-                            SimpleDialogOption(
-                              onPressed: () => Navigator.pop(context, 2),
-                              child: const Text('焼肉'),
-                            ),
-                            SimpleDialogOption(
-                              onPressed: () => Navigator.pop(context, 3),
-                              child: const Text('白菜'),
-                            ),
-                          ],
-                        );
-                      });
-                }),
+            simpleDialogButton(context),
 
             // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
             ElevatedButton(
@@ -241,6 +207,44 @@ Widget alertDialogButton(BuildContext context) {
             );
           },
         );
+      });
+}
+
+// アラート　SimpleDialog
+Widget simpleDialogButton(BuildContext context) {
+  return ElevatedButton(
+      child: Text(
+        'SimpleDialog',
+        style: TextStyle(
+          color: Colors.red,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.yellow,
+      ),
+      onPressed: () async {
+        await showDialog<int>(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return SimpleDialog(
+                title: Text('何が好きですか？'),
+                children: <Widget>[
+                  SimpleDialogOption(
+                    onPressed: () => Navigator.pop(context, 1),
+                    child: const Text('ラーメン'),
+                  ),
+                  SimpleDialogOption(
+                    onPressed: () => Navigator.pop(context, 2),
+                    child: const Text('焼肉'),
+                  ),
+                  SimpleDialogOption(
+                    onPressed: () => Navigator.pop(context, 3),
+                    child: const Text('白菜'),
+                  ),
+                ],
+              );
+            });
       });
 }
 
