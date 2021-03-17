@@ -31,39 +31,7 @@ class Page1 extends StatelessWidget {
             aboutDialogButton(context),
 
             // CupertinoDialog あまり使用するのは良くない。
-            ElevatedButton(
-                child: const Text(
-                  'CupertinoDialog',
-                  style: TextStyle(
-                    color: Colors.red,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
-                ),
-                onPressed: () async {
-                  await showDialog<int>(
-                    context: context,
-                    barrierDismissible: false,
-                    builder: (BuildContext context) {
-                      return CupertinoAlertDialog(
-                        title: Text("タイトル"),
-                        content: Text("メッセージ"),
-                        actions: <Widget>[
-                          CupertinoDialogAction(
-                            child: Text("Delete"),
-                            isDestructiveAction: true,
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                          CupertinoDialogAction(
-                            child: Text("OK"),
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                }),
+            cupertinoDialogButton(context),
 
             // ハーフモーダル showBottomSheet
             ElevatedButton(
@@ -249,6 +217,43 @@ Widget aboutDialogButton(BuildContext context) {
           applicationName: "アプリ名",
           applicationVersion: "2.0.1",
           applicationLegalese: "あいうえお",
+        );
+      });
+}
+
+// CupertinoDialog あまり使用するのは良くない。
+Widget cupertinoDialogButton(BuildContext context) {
+  return ElevatedButton(
+      child: const Text(
+        'CupertinoDialog',
+        style: TextStyle(
+          color: Colors.red,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.yellow,
+      ),
+      onPressed: () async {
+        await showDialog<int>(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return CupertinoAlertDialog(
+              title: Text("タイトル"),
+              content: Text("メッセージ"),
+              actions: <Widget>[
+                CupertinoDialogAction(
+                  child: Text("Delete"),
+                  isDestructiveAction: true,
+                  onPressed: () => Navigator.pop(context),
+                ),
+                CupertinoDialogAction(
+                  child: Text("OK"),
+                  onPressed: () => Navigator.pop(context),
+                ),
+              ],
+            );
+          },
         );
       });
 }
