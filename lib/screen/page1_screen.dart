@@ -37,35 +37,7 @@ class Page1 extends StatelessWidget {
             showBottomSheetButton(context),
 
             // ハーフモーダル showModalBottomSheet
-            ElevatedButton(
-                child: const Text('showModalBottomSheet'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green[300],
-                ),
-                onPressed: () {
-                  showModalBottomSheet<void>(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Container(
-                        height: 400,
-                        color: Colors.lightBlue[200],
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              const Text('showModalBottomSheet'),
-                              ElevatedButton(
-                                child: const Text('閉じる'),
-                                onPressed: () => Navigator.pop(context),
-                              )
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                }),
+            showModalBottomSheetButton(context),
 
             // indicator
             ElevatedButton(
@@ -233,34 +205,67 @@ Widget cupertinoDialogButton(BuildContext context) {
 // ハーフモーダル showBottomSheet
 Widget showBottomSheetButton(BuildContext context) {
   return ElevatedButton(
-          child: const Text('showBottomSheet'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.green[300],
-          ),
-          onPressed: () {
-            Scaffold.of(context).showBottomSheet<void>(
-              (BuildContext context) {
-                return Container(
-                  height: 500,
-                  color: Colors.white,
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        const Text('ハーフモーダル'),
-                        ElevatedButton(
-                            child: const Text('シートを閉じる'),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            })
-                      ],
-                    ),
-                  ),
-                );
-              },
+      child: const Text('showBottomSheet'),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.green[300],
+      ),
+      onPressed: () {
+        Scaffold.of(context).showBottomSheet<void>(
+          (BuildContext context) {
+            return Container(
+              height: 500,
+              color: Colors.white,
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const Text('ハーフモーダル'),
+                    ElevatedButton(
+                        child: const Text('シートを閉じる'),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        })
+                  ],
+                ),
+              ),
             );
-          });
+          },
+        );
+      });
+}
+
+// ハーフモーダル showModalBottomSheet
+Widget showModalBottomSheetButton(BuildContext context) {
+  return ElevatedButton(
+      child: const Text('showModalBottomSheet'),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.green[300],
+      ),
+      onPressed: () {
+        showModalBottomSheet<void>(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              height: 400,
+              color: Colors.lightBlue[200],
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const Text('showModalBottomSheet'),
+                    ElevatedButton(
+                      child: const Text('閉じる'),
+                      onPressed: () => Navigator.pop(context),
+                    )
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      });
 }
 
 class Page6 extends StatelessWidget {
