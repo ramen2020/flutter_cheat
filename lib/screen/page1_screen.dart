@@ -40,29 +40,7 @@ class Page1 extends StatelessWidget {
             showModalBottomSheetButton(context),
 
             // indicator
-            ElevatedButton(
-              child: Text('indicator'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.deepPurple,
-              ),
-              onPressed: () async {
-                showGeneralDialog(
-                    context: context,
-                    barrierDismissible: false, // 画面タップで閉じるを無効
-                    transitionDuration:
-                        Duration(milliseconds: 300), // フェードインアウト時間を300ms
-                    barrierColor: Colors.black.withOpacity(0.5), // 背景色
-                    pageBuilder: (BuildContext context, Animation animation,
-                        Animation secondaryAnimation) {
-                      return Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    });
-                // ３秒後にダイアログを閉じる
-                await Future.delayed(Duration(seconds: 3));
-                Navigator.of(context).pop();
-              },
-            ),
+            indicatorButton(context),
           ]),
     );
   }
@@ -266,6 +244,32 @@ Widget showModalBottomSheetButton(BuildContext context) {
           },
         );
       });
+}
+
+// indicator
+Widget indicatorButton(BuildContext context) {
+  return ElevatedButton(
+    child: Text('indicator'),
+    style: ElevatedButton.styleFrom(
+      primary: Colors.deepPurple,
+    ),
+    onPressed: () async {
+      showGeneralDialog(
+          context: context,
+          barrierDismissible: false, // 画面タップで閉じるを無効
+          transitionDuration: Duration(milliseconds: 300), // フェードインアウト時間を300ms
+          barrierColor: Colors.black.withOpacity(0.5), // 背景色
+          pageBuilder: (BuildContext context, Animation animation,
+              Animation secondaryAnimation) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          });
+      // ３秒後にダイアログを閉じる
+      await Future.delayed(Duration(seconds: 3));
+      Navigator.of(context).pop();
+    },
+  );
 }
 
 class Page6 extends StatelessWidget {
