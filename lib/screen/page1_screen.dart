@@ -26,19 +26,14 @@ class Page1 extends StatelessWidget {
             alertDialogButton(context),
             // アラート　SimpleDialog
             simpleDialogButton(context),
-
             // AboutDialog アプリ名やversionを表示。あまり使わないほうがいい。
             aboutDialogButton(context),
-
             // CupertinoDialog あまり使用するのは良くない。
             cupertinoDialogButton(context),
-
             // ハーフモーダル showBottomSheet
             showBottomSheetButton(context),
-
             // ハーフモーダル showModalBottomSheet
             showModalBottomSheetButton(context),
-
             // indicator
             indicatorButton(context),
           ]),
