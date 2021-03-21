@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.navigation),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green[200],
       ),
     );
   }
