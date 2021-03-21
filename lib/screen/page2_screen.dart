@@ -13,7 +13,7 @@ class Page2 extends StatelessWidget {
             children: <Widget>[
               // 画面遷移
               ElevatedButton(
-                child: Text('buttons_screen'),
+                child: Text('buttons_screenx'),
                 onPressed: () {
                   Navigator.push(
                       context,
