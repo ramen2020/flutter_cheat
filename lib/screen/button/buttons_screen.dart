@@ -52,6 +52,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TextButton(onPressed: () {}, child: Text('TextButton')),
+                OutlinedButton(
+                  onPressed: () {},
+                  child: Text('click here'),
+                )
               ])),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
