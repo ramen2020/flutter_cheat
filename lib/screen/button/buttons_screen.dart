@@ -69,6 +69,11 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                   icon: Icon(Icons.library_books),
                   color: Colors.blue,
                   iconSize: 50,
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.person_outline_sharp),
+                  label: Text('click here'),
                 )
               ])),
       floatingActionButton: FloatingActionButton(
