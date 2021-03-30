@@ -55,6 +55,14 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 OutlinedButton(
                   onPressed: () {},
                   child: Text('click here'),
+                ),
+                ElevatedButton(
+                  onPressed: () {/* ボタンが押せる時 */},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red,
+                    elevation: 16, // 影
+                  ),
+                  child: Text('click here'),
                 )
               ])),
       floatingActionButton: FloatingActionButton(
