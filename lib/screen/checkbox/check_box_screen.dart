@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ButtonsScreen extends StatefulWidget {
+class CheckBoxScreen extends StatefulWidget {
   @override
-  _ButtonsScreenState createState() => _ButtonsScreenState();
+  _CheckBoxScreenState createState() => _CheckBoxScreenState();
 }
 
-class _ButtonsScreenState extends State<ButtonsScreen> {
+class _CheckBoxScreenState extends State<CheckBoxScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
