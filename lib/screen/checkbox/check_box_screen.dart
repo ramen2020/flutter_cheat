@@ -31,23 +31,27 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Checkbox(
-                      checkColor: Colors.white,
-                      fillColor: MaterialStateProperty.resolveWith(getColor),
-                      value: isChecked,
-                      onChanged: (bool value) {
-                        setState(() {
-                          isChecked = value;
-                        });
-                      },
-                    ),
-                    TextButton(onPressed: () {}, child: Text('TextButton'))
-                  ],
-                )
+                Container(
+                    // 背景色
+                    color: Colors.white,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Checkbox(
+                          checkColor: Colors.white,
+                          fillColor:
+                              MaterialStateProperty.resolveWith(getColor),
+                          value: isChecked,
+                          onChanged: (bool value) {
+                            setState(() {
+                              isChecked = value;
+                            });
+                          },
+                        ),
+                        TextButton(onPressed: () {}, child: Text('TextButton'))
+                      ],
+                    ))
               ])),
     );
   }
