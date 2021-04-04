@@ -6,6 +6,20 @@ class CheckBoxScreen extends StatefulWidget {
 }
 
 class _CheckBoxScreenState extends State<CheckBoxScreen> {
+  bool isChecked = false;
+
+  Color getColor(Set<MaterialState> states) {
+    const Set<MaterialState> interactiveStates = <MaterialState>{
+      MaterialState.pressed,
+      MaterialState.hovered,
+      MaterialState.focused,
+    };
+    if (states.any(interactiveStates.contains)) {
+      return Colors.blue;
+    }
+    return Colors.red;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +32,16 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TextButton(onPressed: () {}, child: Text('TextButton')),
+                Checkbox(
+                  checkColor: Colors.white,
+                  fillColor: MaterialStateProperty.resolveWith(getColor),
+                  value: isChecked,
+                  onChanged: (bool value) {
+                    setState(() {
+                      isChecked = value;
+                    });
+                  },
+                )
               ])),
     );
   }
