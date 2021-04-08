@@ -5,7 +5,7 @@ class ScrollViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('ButtonsScreen'),
+          title: Text('ScrollViewScreen'),
         ),
         body: Container(
             color: Colors.yellow[100],
