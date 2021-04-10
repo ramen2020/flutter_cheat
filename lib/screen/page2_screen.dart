@@ -33,6 +33,17 @@ class Page2 extends StatelessWidget {
                         builder: (context) => CheckBoxScreen(),
                       ));
                 },
+              ),
+
+              ElevatedButton(
+                child: Text('slider_screen'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SliderViewScreen(),
+                      ));
+                },
               )
             ]));
   }
