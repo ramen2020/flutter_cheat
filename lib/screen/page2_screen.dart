@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './button/buttons_screen.dart';
 import './checkbox/check_box_screen.dart';
+import './slider/slider_view_screen.dart';
 
 class Page2 extends StatelessWidget {
   @override
