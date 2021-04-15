@@ -37,30 +37,33 @@ class _SliderViewScreenState extends State<SliderViewScreen> {
                       },
                     ),
                   ]),
-                  Text("Custom Slider"),
-                  SliderTheme(
-                    data: SliderTheme.of(context).copyWith(
-                      trackHeight: 10,
-                      thumbColor: Colors.purpleAccent,
-                      thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12),
-                      valueIndicatorColor: Colors.orange,
-                      overlayColor: Colors.orange.withAlpha(80),
-                      activeTrackColor: Colors.black,
-                      inactiveTrackColor: Colors.amber,
-                      inactiveTickMarkColor: Colors.blue,
-                      activeTickMarkColor: Colors.green,
-                    ),
-                    child: Slider(
-                      min: 0,
-                      max: 100,
-                      divisions: 10,
-                      value: _customSliderValue,
-                      label: '${_customSliderValue.floor()}',
-                      onChanged: (d) => setState(() {
-                        _customSliderValue = d;
-                      }),
-                    ),
-                  )
+                  Column(children: <Widget>[
+                    Text("Custom Slider"),
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        trackHeight: 10,
+                        thumbColor: Colors.purpleAccent,
+                        thumbShape:
+                            RoundSliderThumbShape(enabledThumbRadius: 12),
+                        valueIndicatorColor: Colors.orange,
+                        overlayColor: Colors.orange.withAlpha(80),
+                        activeTrackColor: Colors.black,
+                        inactiveTrackColor: Colors.amber,
+                        inactiveTickMarkColor: Colors.blue,
+                        activeTickMarkColor: Colors.green,
+                      ),
+                      child: Slider(
+                        min: 0,
+                        max: 100,
+                        divisions: 10,
+                        value: _customSliderValue,
+                        label: '${_customSliderValue.floor()}',
+                        onChanged: (d) => setState(() {
+                          _customSliderValue = d;
+                        }),
+                      ),
+                    )
+                  ])
                 ])));
   }
 }
