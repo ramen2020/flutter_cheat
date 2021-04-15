@@ -20,7 +20,7 @@ class _SliderViewScreenState extends State<SliderViewScreen> {
             alignment: Alignment.center,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Column(children: <Widget>[
                     Text("Slider"),
