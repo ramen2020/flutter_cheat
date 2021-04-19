@@ -13,7 +13,27 @@ class ScrollViewScreen extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[scrollViewRightFixed(context)])));
+                children: <Widget>[
+                  scrollViewRightFixed(context),
+                  SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(children: <Widget>[
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('A')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('B')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('C')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('D')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('E')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('F')),
+                        SizedBox(
+                            width: 100, height: 50, child: const Text('G')),
+                      ]))
+                ])));
   }
 }
 
