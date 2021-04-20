@@ -22,6 +22,8 @@ class _SliderViewScreenState extends State<SliderViewScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
+
+                  // 基本のslider
                   Column(children: <Widget>[
                     Text("Slider"),
                     Slider(
@@ -37,6 +39,8 @@ class _SliderViewScreenState extends State<SliderViewScreen> {
                       },
                     ),
                   ]),
+
+                  // 実務的なslider　色など変えている
                   Column(children: <Widget>[
                     Text("Custom Slider"),
                     SliderTheme(
@@ -63,7 +67,8 @@ class _SliderViewScreenState extends State<SliderViewScreen> {
                         }),
                       ),
                     )
-                  ])
+                  ]
+                  )
                 ])));
   }
 }
