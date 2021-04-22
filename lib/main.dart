@@ -79,6 +79,30 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.navigation),
         backgroundColor: Colors.green[200],
       ),
+      endDrawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('ヘッダー'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text("ボタン"),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+            ListTile(
+              title: Text("ボタン"),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+            ListTile(
+              title: Text("ボタン"),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
