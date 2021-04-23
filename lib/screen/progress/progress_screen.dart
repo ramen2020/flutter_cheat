@@ -11,7 +11,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('SliderViewScreen'),
+          title: Text('ProgressScreen'),
         ),
         body: Container(
             color: Colors.yellow[100],
