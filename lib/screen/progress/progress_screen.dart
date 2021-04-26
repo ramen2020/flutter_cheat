@@ -19,7 +19,10 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Column(children: <Widget>[CircularProgressIndicator()]),
+                  Column(children: <Widget>[
+                    Text("CircularProgressIndicator"),
+                    CircularProgressIndicator()
+                    ]),
                   Column(children: <Widget>[])
                 ])));
   }
