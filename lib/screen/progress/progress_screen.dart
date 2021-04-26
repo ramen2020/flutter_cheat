@@ -6,7 +6,6 @@ class ProgressScreen extends StatefulWidget {
 }
 
 class _ProgressScreenState extends State<ProgressScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +19,8 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Column(children: <Widget>[
-                    
-                  ]),
-                  Column(children: <Widget>[
-                    
-                  ]
-                  )
+                  Column(children: <Widget>[CircularProgressIndicator()]),
+                  Column(children: <Widget>[])
                 ])));
   }
 }
