@@ -56,6 +56,17 @@ class Page2 extends StatelessWidget {
                         builder: (context) => SliderViewScreen(),
                       ));
                 },
+              ),
+
+              ElevatedButton(
+                child: Text('progress_screen'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProgressScreen(),
+                      ));
+                },
               )
             ]));
   }
