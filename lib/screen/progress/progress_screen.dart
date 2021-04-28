@@ -23,7 +23,9 @@ class _ProgressScreenState extends State<ProgressScreen> {
                     Text("CircularProgressIndicator"),
                     CircularProgressIndicator()
                     ]),
-                  Column(children: <Widget>[])
+                  Column(children: <Widget>[
+                    LinearProgressIndicator()
+                  ])
                 ])));
   }
 }
