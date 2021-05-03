@@ -69,7 +69,17 @@ class Page2 extends StatelessWidget {
                         builder: (context) => ProgressScreen(),
                       ));
                 },
-              )
+              ),
+
+              ElevatedButton(
+                  child: Text('GridScreen'),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => GridScreen(),
+                        ));
+                  }),
             ]));
   }
 }
