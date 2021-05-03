@@ -4,7 +4,7 @@ import './checkbox/check_box_screen.dart';
 import './slider/slider_view_screen.dart';
 import './scrollview/scroll_view_screen.dart';
 import './progress/progress_screen.dart';
-
+import './grid/grid_screen.dart';
 
 class Page2 extends StatelessWidget {
   @override
