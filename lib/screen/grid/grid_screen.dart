@@ -6,61 +6,39 @@ class GridScreen extends StatefulWidget {
 }
 
 class _GridScreenState extends State<GridScreen> {
+  var list = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text('ProgressScreen'),
         ),
-        body: Container(
-            color: Colors.yellow[100],
-            alignment: Alignment.center,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Column(children: <Widget>[
-                    GridView.count(
-                      primary: false,
-                      padding: const EdgeInsets.all(20),
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 2,
-                      children: <Widget>[
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text("He'd have you all unravel at the"),
-                          color: Colors.teal[100],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text('Heed not the rabble'),
-                          color: Colors.teal[200],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text('Sound of screams but the'),
-                          color: Colors.teal[300],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text('Who scream'),
-                          color: Colors.teal[400],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text('Revolution is coming...'),
-                          color: Colors.teal[500],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Text('Revolution, they...'),
-                          color: Colors.teal[600],
-                        ),
-                      ],
-                    )
-                  ]),
-                  Column(children: <Widget>[])
-                ])));
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Expanded( // これ重要
+                  child: GridView.count(
+                      crossAxisCount: 3, // 1行に表示する数
+                      crossAxisSpacing: 4.0, // 縦スペース
+                      mainAxisSpacing: 4.0, // 横スペース
+                      shrinkWrap: true,
+                      children: List.generate(30, (index) {
+                        return Container(
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                            ),
+                            child: GridTile(
+                                child: Icon(Icons.map),
+                                footer: Center(
+                                  child: Text(
+                                    'Meeage $index',
+                                  ),
+                                )));
+                      })))
+            ]));
   }
 }
