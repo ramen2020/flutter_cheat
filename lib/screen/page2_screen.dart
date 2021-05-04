@@ -31,6 +31,9 @@ class Page2 extends StatelessWidget {
                   }),
 
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red[200],
+                ),
                 child: Text('checkbox_screen'),
                 onPressed: () {
                   Navigator.push(
@@ -53,6 +56,9 @@ class Page2 extends StatelessWidget {
               ),
 
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[200],
+                ),
                 child: Text('slider_screen'),
                 onPressed: () {
                   Navigator.push(
@@ -64,6 +70,9 @@ class Page2 extends StatelessWidget {
               ),
 
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.pink[200],
+                ),
                 child: Text('progress_screen'),
                 onPressed: () {
                   Navigator.push(
@@ -75,6 +84,9 @@ class Page2 extends StatelessWidget {
               ),
 
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue[200],
+                  ),
                   child: Text('GridScreen'),
                   onPressed: () {
                     Navigator.push(
