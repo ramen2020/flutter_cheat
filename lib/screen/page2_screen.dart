@@ -18,7 +18,10 @@ class Page2 extends StatelessWidget {
             children: <Widget>[
               // 画面遷移
               ElevatedButton(
-                  child: Text('buttons_screenx'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black26,
+                  ),
+                  child: Text('buttons_screen'),
                   onPressed: () {
                     Navigator.push(
                         context,
