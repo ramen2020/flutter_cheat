@@ -7,15 +7,14 @@ analyzer:
 
 linter:
   rules:
-    avoid_types_on_closure_parameters: true
-    avoid_void_async: true
-    cancel_subscriptions: true
-    close_sinks: true
-    directives_ordering: true
-    # Required because of the numbered sources in  lib/src/basics
-    file_names: false
-    package_api_docs: true
-    package_prefixed_library_names: true
-    test_types_in_equals: true
-    throw_in_finally: true
-    unnecessary_statements: true
+    avoid_types_on_closure_parameters: true # 関数式パラメーターの型に注釈を付けることは避けてください。
+    avoid_void_async: true # voidを返す非同期関数は避けてください。
+    cancel_subscriptions: true # dart.async.StreamSubscriptionのインスタンスをキャンセルします。
+    close_sinks: true # dart.core.Sinkのインスタンスを閉じます
+    directives_ordering: true # 効果的なDartガイドディレクティブの並べ替え規則を順守してください。
+    file_names: false # lowercase_with_underscores。を使用してソースファイルに名前を付けます
+    package_api_docs: true # すべてのパブリックAPIにドキュメントコメントを提供します。
+    package_prefixed_library_names: true # ライブラリ名の前に、パッケージ名とドットで区切られたパスを付けます。
+    test_types_in_equals: true # 演算子==（オブジェクトその他）の型引数をテストします。
+    throw_in_finally: true # throw最終的にブロックすることは避けてください。
+    unnecessary_statements: true # 不必要な文言は使わないようにしましょう。
