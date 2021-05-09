@@ -18,3 +18,4 @@ linter:
     test_types_in_equals: true # 演算子==（オブジェクトその他）の型引数をテストします。
     throw_in_finally: true # throw最終的にブロックすることは避けてください。
     unnecessary_statements: true # 不必要な文言は使わないようにしましょう。
+    lines_longer_than_80_chars: true # 80文字を超える行は避けてください。
