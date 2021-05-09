@@ -16,7 +16,7 @@ class Page1 extends StatelessWidget {
             ElevatedButton(
               child: Text('button'),
               onPressed: () {
-                Navigator.push(
+                Navigator.push<void>(
                     context,
                     MaterialPageRoute(
                       builder: (context) => Page6(),
@@ -262,7 +262,7 @@ Widget indicatorButton(BuildContext context) {
             );
           });
       // ３秒後にダイアログを閉じる
-      await Future.delayed(Duration(seconds: 3));
+      await Future<void>.delayed(Duration(seconds: 3));
       Navigator.of(context).pop();
     },
   );
