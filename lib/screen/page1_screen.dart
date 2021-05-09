@@ -3,6 +3,9 @@ import 'package:flutter/cupertino.dart';
 import './page6_screen.dart';
 
 class Page1 extends StatelessWidget {
+
+  const Page1({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +17,7 @@ class Page1 extends StatelessWidget {
           children: <Widget>[
             // 画面遷移
             ElevatedButton(
-              child: Text('button'),
+              child: const Text('button'),
               onPressed: () {
                 Navigator.push<void>(
                     context,
@@ -45,7 +48,7 @@ class Page1 extends StatelessWidget {
 // アラート　AlertDialog
 Widget alertDialogButton(BuildContext context) {
   return ElevatedButton(
-      child: Text(
+      child: const Text(
         'AlertDialog',
         style: TextStyle(
           color: Colors.red,
@@ -58,17 +61,17 @@ Widget alertDialogButton(BuildContext context) {
         await showDialog<int>(
           context: context,
           barrierDismissible: false,
-          builder: (BuildContext context) {
+          builder: (context) {
             return AlertDialog(
-              title: Text('AlertDialog'),
-              content: Text('ダイアログ出動！'),
+              title: const Text('AlertDialog'),
+              content: const Text('ダイアログ出動！'),
               actions: <Widget>[
                 ElevatedButton(
-                  child: Text('Cancel'),
+                  child: const Text('Cancel'),
                   onPressed: () => Navigator.of(context).pop(0),
                 ),
                 ElevatedButton(
-                  child: Text('OK'),
+                  child: const Text('OK'),
                   onPressed: () => Navigator.of(context).pop(1),
                 ),
               ],
@@ -81,7 +84,7 @@ Widget alertDialogButton(BuildContext context) {
 // アラート　SimpleDialog
 Widget simpleDialogButton(BuildContext context) {
   return ElevatedButton(
-      child: Text(
+      child: const Text(
         'SimpleDialog',
         style: TextStyle(
           color: Colors.red,
@@ -94,9 +97,9 @@ Widget simpleDialogButton(BuildContext context) {
         await showDialog<int>(
             context: context,
             barrierDismissible: false,
-            builder: (BuildContext context) {
+            builder: (context) {
               return SimpleDialog(
-                title: Text('何が好きですか？'),
+                title: const Text('何が好きですか？'),
                 children: <Widget>[
                   SimpleDialogOption(
                     onPressed: () => Navigator.pop(context, 1),
@@ -131,7 +134,7 @@ Widget aboutDialogButton(BuildContext context) {
       onPressed: () async {
         showAboutDialog(
           context: context,
-          applicationIcon: Icon(Icons.photo),
+          applicationIcon: const Icon(Icons.photo),
           applicationName: "アプリ名",
           applicationVersion: "2.0.1",
           applicationLegalese: "あいうえお",
@@ -155,18 +158,18 @@ Widget cupertinoDialogButton(BuildContext context) {
         await showDialog<int>(
           context: context,
           barrierDismissible: false,
-          builder: (BuildContext context) {
+          builder: (context) {
             return CupertinoAlertDialog(
-              title: Text("タイトル"),
-              content: Text("メッセージ"),
+              title: const Text("タイトル"),
+              content: const Text("メッセージ"),
               actions: <Widget>[
                 CupertinoDialogAction(
-                  child: Text("Delete"),
+                  child: const Text("Delete"),
                   isDestructiveAction: true,
                   onPressed: () => Navigator.pop(context),
                 ),
                 CupertinoDialogAction(
-                  child: Text("OK"),
+                  child: const Text("OK"),
                   onPressed: () => Navigator.pop(context),
                 ),
               ],
@@ -185,7 +188,7 @@ Widget showBottomSheetButton(BuildContext context) {
       ),
       onPressed: () {
         Scaffold.of(context).showBottomSheet<void>(
-          (BuildContext context) {
+          (context) {
             return Container(
               height: 500,
               color: Colors.white,
@@ -219,7 +222,7 @@ Widget showModalBottomSheetButton(BuildContext context) {
       onPressed: () {
         showModalBottomSheet<void>(
           context: context,
-          builder: (BuildContext context) {
+          builder: (context) {
             return Container(
               height: 400,
               color: Colors.lightBlue[200],
@@ -245,7 +248,7 @@ Widget showModalBottomSheetButton(BuildContext context) {
 // indicator
 Widget indicatorButton(BuildContext context) {
   return ElevatedButton(
-    child: Text('indicator'),
+    child: const Text('indicator'),
     style: ElevatedButton.styleFrom(
       primary: Colors.deepPurple,
     ),
@@ -253,16 +256,18 @@ Widget indicatorButton(BuildContext context) {
       showGeneralDialog(
           context: context,
           barrierDismissible: false, // 画面タップで閉じるを無効
-          transitionDuration: Duration(milliseconds: 300), // フェードインアウト時間を300ms
+          transitionDuration: const Duration(
+            milliseconds: 300  // フェードインアウト時間を300ms
+          ),
           barrierColor: Colors.black.withOpacity(0.5), // 背景色
-          pageBuilder: (BuildContext context, Animation animation,
-              Animation secondaryAnimation) {
-            return Center(
+          pageBuilder: (context, animation,
+            secondaryAnimation) {
+            return const Center(
               child: CircularProgressIndicator(),
             );
           });
       // ３秒後にダイアログを閉じる
-      await Future<void>.delayed(Duration(seconds: 3));
+      await Future<void>.delayed(const Duration(seconds: 3));
       Navigator.of(context).pop();
     },
   );
