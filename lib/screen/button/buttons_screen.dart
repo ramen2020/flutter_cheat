@@ -84,18 +84,18 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
     );
   }
 
-  void selectedItem(BuildContext context, item) {
+  void selectedItem(BuildContext context, int item) {
     switch (item) {
       case 0:
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => Page6()));
+            .push<void>(MaterialPageRoute(builder: (context) => Page6()));
         break;
       case 1:
         print("Privacy Clicked");
         break;
       case 2:
         print("User Logged out");
-        Navigator.of(context).pushAndRemoveUntil(
+        Navigator.of(context).pushAndRemoveUntil<void>(
             MaterialPageRoute(builder: (context) => Page6()), (route) => false);
         break;
     }
