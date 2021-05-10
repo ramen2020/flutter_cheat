@@ -15,7 +15,7 @@ class Page3 extends StatelessWidget {
               ElevatedButton(
                   child: Text('ScrollViewScreen'),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.push<void>(
                         context,
                         MaterialPageRoute(
                           builder: (context) => ScrollViewScreen(),
