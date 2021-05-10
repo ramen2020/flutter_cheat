@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import './button/buttons_screen.dart';
 import './checkbox/check_box_screen.dart';
-import './slider/slider_view_screen.dart';
-import './scrollview/scroll_view_screen.dart';
-import './progress/progress_screen.dart';
 import './grid/grid_screen.dart';
+import './progress/progress_screen.dart';
+import './scrollview/scroll_view_screen.dart';
+import './slider/slider_view_screen.dart';
+
 
 class Page2 extends StatelessWidget {
   @override
@@ -23,7 +24,7 @@ class Page2 extends StatelessWidget {
                   ),
                   child: Text('buttons_screen'),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.push<void>(
                         context,
                         MaterialPageRoute(
                           builder: (context) => ButtonsScreen(),
@@ -36,7 +37,7 @@ class Page2 extends StatelessWidget {
                 ),
                 child: Text('checkbox_screen'),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.push<void>(
                       context,
                       MaterialPageRoute(
                         builder: (context) => CheckBoxScreen(),
@@ -47,7 +48,7 @@ class Page2 extends StatelessWidget {
               ElevatedButton(
                 child: Text('scroll_view'),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.push<void>(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ScrollViewScreen(),
@@ -61,7 +62,7 @@ class Page2 extends StatelessWidget {
                 ),
                 child: Text('slider_screen'),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.push<void>(
                       context,
                       MaterialPageRoute(
                         builder: (context) => SliderViewScreen(),
@@ -75,7 +76,7 @@ class Page2 extends StatelessWidget {
                 ),
                 child: Text('progress_screen'),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.push<void>(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ProgressScreen(),
@@ -89,7 +90,7 @@ class Page2 extends StatelessWidget {
                   ),
                   child: Text('GridScreen'),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.push<void>(
                         context,
                         MaterialPageRoute(
                           builder: (context) => GridScreen(),
