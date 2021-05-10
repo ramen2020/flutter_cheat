@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../page6_screen.dart';
 
 class ButtonsScreen extends StatefulWidget {
+  const ButtonsScreen({Key key}) : super(key: key);
   @override
   _ButtonsScreenState createState() => _ButtonsScreenState();
 }
@@ -11,28 +12,28 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ButtonsScreen'),
+        title: const Text('ButtonsScreen'),
         actions: <Widget>[
           Theme(
             data: Theme.of(context).copyWith(
-                textTheme: TextTheme().apply(bodyColor: Colors.blue),
+                textTheme: const TextTheme().apply(bodyColor: Colors.blue),
                 dividerColor: Colors.white,
-                iconTheme: IconThemeData(color: Colors.white)),
+                iconTheme: const IconThemeData(color: Colors.white)),
             child: PopupMenuButton<int>(
               color: Colors.blue,
               itemBuilder: (context) => [
-                PopupMenuItem<int>(value: 0, child: Text("page6")),
-                PopupMenuItem<int>(value: 1, child: Text("page6")),
-                PopupMenuDivider(),
+                const PopupMenuItem<int>(value: 0, child: Text("page6")),
+                const PopupMenuItem<int>(value: 1, child: Text("page6")),
+                const PopupMenuDivider(),
                 PopupMenuItem<int>(
                     value: 2,
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.logout,
                           color: Colors.white,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 7,
                         ),
                         Text("ログアウト")
@@ -51,10 +52,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                TextButton(onPressed: () {}, child: Text('TextButton')),
+                TextButton(onPressed: () {}, child: const Text('TextButton')),
                 OutlinedButton(
                   onPressed: () {},
-                  child: Text('click here'),
+                  child: const Text('click here'),
                 ),
                 ElevatedButton(
                   onPressed: () {/* ボタンが押せる時 */},
@@ -62,18 +63,18 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                     primary: Colors.red,
                     elevation: 16, // 影
                   ),
-                  child: Text('click here'),
+                  child: const Text('click here'),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.library_books),
+                  icon: const Icon(Icons.library_books),
                   color: Colors.blue,
                   iconSize: 50,
                 ),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: Icon(Icons.person_outline_sharp),
-                  label: Text('click here'),
+                  icon: const Icon(Icons.person_outline_sharp),
+                  label: const Text('click here'),
                 )
               ])),
       floatingActionButton: FloatingActionButton(
