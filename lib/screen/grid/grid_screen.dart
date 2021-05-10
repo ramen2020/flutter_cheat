@@ -6,7 +6,7 @@ class GridScreen extends StatefulWidget {
 }
 
 class _GridScreenState extends State<GridScreen> {
-  var list = [];
+  List<String> list = [];
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,8 @@ class _GridScreenState extends State<GridScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Expanded( // これ重要
+              Expanded(
+                  // これ重要
                   child: GridView.count(
                       crossAxisCount: 3, // 1行に表示する数
                       crossAxisSpacing: 4.0, // 縦スペース
