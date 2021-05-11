@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CheckBoxScreen extends StatefulWidget {
+  const CheckBoxScreen({Key key}) : super(key: key);
+
   @override
   _CheckBoxScreenState createState() => _CheckBoxScreenState();
 }
@@ -23,7 +25,7 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('ButtonsScreen')),
+      appBar: AppBar(title: const Text('ButtonsScreen')),
       body: Container(
           color: Colors.red[100],
           alignment: Alignment.center,
@@ -49,7 +51,8 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
                             });
                           },
                         ),
-                        TextButton(onPressed: () {}, child: Text('TextButton'))
+                        TextButton(onPressed: () {},
+                        child: const Text('TextButton'))
                       ],
                     ))
               ])),
