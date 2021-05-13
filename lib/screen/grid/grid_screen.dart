@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GridScreen extends StatefulWidget {
+  const GridScreen({Key key}) : super(key: key);
   @override
   _GridScreenState createState() => _GridScreenState();
 }
@@ -12,7 +13,7 @@ class _GridScreenState extends State<GridScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('ProgressScreen'),
+          title: const Text('ProgressScreen'),
         ),
         body: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -29,11 +30,11 @@ class _GridScreenState extends State<GridScreen> {
                         return Container(
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.center,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.green,
                             ),
                             child: GridTile(
-                                child: Icon(Icons.map),
+                                child: const Icon(Icons.map),
                                 footer: Center(
                                   child: Text(
                                     'Meeage $index',
