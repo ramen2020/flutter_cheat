@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ScrollViewScreen extends StatelessWidget {
+  const ScrollViewScreen({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('ScrollViewScreen'),
+          title: const Text('ScrollViewScreen'),
         ),
         body: Container(
             color: Colors.yellow[100],
@@ -15,28 +16,21 @@ class ScrollViewScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(children: <Widget>[
-                    Text("左は固定で、右はスクロール"),
+                    const Text("左は固定で、右はスクロール"),
                     scrollViewRightFixed(context),
                   ]),
                   Column(children: <Widget>[
-                    Text("スクロール　only"),
+                    const Text("スクロール　only"),
                     SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: Row(children: <Widget>[
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('A')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('B')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('C')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('D')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('E')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('F')),
-                          SizedBox(
-                              width: 100, height: 50, child: const Text('G')),
+                        child: Row(children: const [
+                          SizedBox(width: 100, height: 50, child: Text('A')),
+                          SizedBox(width: 100, height: 50, child: Text('B')),
+                          SizedBox(width: 100, height: 50, child: Text('C')),
+                          SizedBox(width: 100, height: 50, child: Text('D')),
+                          SizedBox(width: 100, height: 50, child: Text('E')),
+                          SizedBox(width: 100, height: 50, child: Text('F')),
+                          SizedBox(width: 100, height: 50, child: Text('G')),
                         ]))
                   ]),
                 ])));
@@ -45,10 +39,10 @@ class ScrollViewScreen extends StatelessWidget {
 
 // 左を固定で、右は横スクロール
 Widget scrollViewRightFixed(BuildContext context) {
-  return Container(
+  return SizedBox(
       width: 1030,
       child: Row(children: <Widget>[
-        SizedBox(
+        const SizedBox(
           width: 100,
           height: 100,
           child: Text('固定'),
@@ -56,12 +50,12 @@ Widget scrollViewRightFixed(BuildContext context) {
         Expanded(
             child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(children: <Widget>[
-                  SizedBox(width: 100, height: 50, child: const Text('A')),
-                  SizedBox(width: 100, height: 50, child: const Text('B')),
-                  SizedBox(width: 100, height: 50, child: const Text('C')),
-                  SizedBox(width: 100, height: 50, child: const Text('D')),
-                  SizedBox(width: 100, height: 50, child: const Text('E')),
+                child: Row(children: const [
+                  SizedBox(width: 100, height: 50, child: Text('A')),
+                  SizedBox(width: 100, height: 50, child: Text('B')),
+                  SizedBox(width: 100, height: 50, child: Text('C')),
+                  SizedBox(width: 100, height: 50, child: Text('D')),
+                  SizedBox(width: 100, height: 50, child: Text('E')),
                 ])))
       ]));
 }
