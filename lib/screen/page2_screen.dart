@@ -96,6 +96,19 @@ class Page2 extends StatelessWidget {
                           builder: (context) => GridScreen(),
                         ));
                   }),
+
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.brown[200],
+                  ),
+                  child: const Text('ListScreen'),
+                  onPressed: () {
+                    Navigator.push<void>(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ListScreen(),
+                        ));
+                  }),
             ]));
   }
 }
