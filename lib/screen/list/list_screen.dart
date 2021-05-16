@@ -19,7 +19,7 @@ class _ListScreenState extends State<ListScreen> {
       body: ListView.builder(
           padding: const EdgeInsets.all(8),
           itemCount: entries.length,
-          itemBuilder: (BuildContext context, int index) {
+          itemBuilder: (context, index) {
             return Container(
               height: 50,
               color: Colors.amber[colorCodes[index]],
