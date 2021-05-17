@@ -109,6 +109,39 @@ class Page2 extends StatelessWidget {
                           builder: (context) => const ListScreen(),
                         ));
                   }),
+
+              ElevatedButton(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.blue[300],
+                        Colors.blue[500],
+                        Colors.blue[700],
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.all(10),
+                  child: const Text('Button'),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(0),
+                ),
+                onPressed: () {},
+              ),
+
+              ElevatedButton.icon(
+                icon: const Icon(
+                  Icons.dangerous,
+                  color: Colors.white,
+                ),
+                label: const Text('Button'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red,
+                  onPrimary: Colors.white,
+                ),
+                onPressed: () {},
+              ),
             ]));
   }
 }
