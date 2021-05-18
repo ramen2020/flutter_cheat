@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import './page6_screen.dart';
 
 class Page1 extends StatelessWidget {
-
   const Page1({Key key}) : super(key: key);
 
   @override
@@ -26,6 +25,7 @@ class Page1 extends StatelessWidget {
                     ));
               },
             ),
+            popUpButton(context),
             // アラート　AlertDialog
             alertDialogButton(context),
             // アラート　SimpleDialog
@@ -43,6 +43,47 @@ class Page1 extends StatelessWidget {
           ]),
     );
   }
+}
+
+Widget popUpButton(BuildContext context) {
+  return ElevatedButton(
+      child: const Text(
+        'AlertDialog',
+        style: TextStyle(
+          color: Colors.red,
+        ),
+      ),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.yellow, //ボタンの背景色
+      ),
+      onPressed: () async {
+        await showDialog<void>(
+            context: context,
+            builder: (context) {
+              Column(
+                children: <Widget>[
+                  AlertDialog(
+                    title: Text("タイトル"),
+                    content: SingleChildScrollView(
+                      child: ListBody(
+                        children: <Widget>[
+                          Column(children: <Widget>[
+                            // コンテンツ
+                            Text("テストです"),
+                            Text("テストです"),
+                            Text("テストです"),
+                          ]),
+                        ],
+                      ),
+                    ),
+                    actions: <Widget>[
+                      // ボタン
+                    ],
+                  ),
+                ],
+              );
+            });
+      });
 }
 
 // アラート　AlertDialog
@@ -256,12 +297,11 @@ Widget indicatorButton(BuildContext context) {
       showGeneralDialog(
           context: context,
           barrierDismissible: false, // 画面タップで閉じるを無効
-          transitionDuration: const Duration(
-            milliseconds: 300  // フェードインアウト時間を300ms
-          ),
+          transitionDuration:
+              const Duration(milliseconds: 300 // フェードインアウト時間を300ms
+                  ),
           barrierColor: Colors.black.withOpacity(0.5), // 背景色
-          pageBuilder: (context, animation,
-            secondaryAnimation) {
+          pageBuilder: (context, animation, secondaryAnimation) {
             return const Center(
               child: CircularProgressIndicator(),
             );
