@@ -9,6 +9,8 @@ import './slider/slider_view_screen.dart';
 import './wave/wave_screen.dart';
 
 class Page2 extends StatelessWidget {
+  const Page2({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,12 +25,12 @@ class Page2 extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.black26,
                   ),
-                  child: Text('buttons_screen'),
+                  child: const Text('buttons_screen'),
                   onPressed: () {
                     Navigator.push<void>(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ButtonsScreen(),
+                          builder: (context) => const ButtonsScreen(),
                         ));
                   }),
 
@@ -36,23 +38,23 @@ class Page2 extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.red[200],
                 ),
-                child: Text('checkbox_screen'),
+                child: const Text('checkbox_screen'),
                 onPressed: () {
                   Navigator.push<void>(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CheckBoxScreen(),
+                        builder: (context) => const CheckBoxScreen(),
                       ));
                 },
               ),
 
               ElevatedButton(
-                child: Text('scroll_view'),
+                child: const Text('scroll_view'),
                 onPressed: () {
                   Navigator.push<void>(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ScrollViewScreen(),
+                        builder: (context) => const ScrollViewScreen(),
                       ));
                 },
               ),
@@ -61,7 +63,7 @@ class Page2 extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green[200],
                 ),
-                child: Text('slider_screen'),
+                child: const Text('slider_screen'),
                 onPressed: () {
                   Navigator.push<void>(
                       context,
@@ -75,12 +77,12 @@ class Page2 extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.pink[200],
                 ),
-                child: Text('progress_screen'),
+                child: const Text('progress_screen'),
                 onPressed: () {
                   Navigator.push<void>(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProgressScreen(),
+                        builder: (context) => const ProgressScreen(),
                       ));
                 },
               ),
@@ -89,12 +91,12 @@ class Page2 extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue[200],
                   ),
-                  child: Text('GridScreen'),
+                  child: const Text('GridScreen'),
                   onPressed: () {
                     Navigator.push<void>(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => GridScreen(),
+                          builder: (context) => const GridScreen(),
                         ));
                   }),
 
