@@ -122,12 +122,18 @@ class Page2 extends StatelessWidget {
                     ),
                   ),
                   padding: const EdgeInsets.all(10),
-                  child: const Text('Button'),
+                  child: const Text('WaveScreen'),
                 ),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.all(0),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push<void>(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WaveScreen(),
+                      ));
+                },
               ),
 
               ElevatedButton.icon(
