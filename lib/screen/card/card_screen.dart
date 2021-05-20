@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Card extends StatelessWidget {
+class CardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class Card extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            
+
                           ]))
                 ])));
   }
