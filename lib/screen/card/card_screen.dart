@@ -4,9 +4,9 @@ class CardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('ButtonsScreen')),
+        appBar: AppBar(title: const Text('ButtonsScreen')),
         body: Container(
-            padding: EdgeInsets.all(30),
+            padding: const EdgeInsets.all(30),
             color: Colors.red[200],
             alignment: Alignment.center,
             child: Column(
@@ -19,15 +19,16 @@ class CardScreen extends StatelessWidget {
 Widget card1(BuildContext context) {
   return Card(
     child: Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'Ramen, whether soy sauce, salt, or miso, has an invaluable impact on your life.',
+        children: const [
+          Text(
+            '''Ramen, whether soy sauce, salt, or miso,
+has an invaluable impact on your life.''',
             style: TextStyle(fontSize: 16),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12),
           Text(
             'Ramen will save the world.',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
