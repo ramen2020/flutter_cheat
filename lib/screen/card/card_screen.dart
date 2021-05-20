@@ -12,27 +12,28 @@ class CardScreen extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Card(
-                    child: Container(
-                      padding: EdgeInsets.all(12),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Ramen, whether soy sauce, salt, or miso, has an invaluable impact on your life.',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                          const SizedBox(height: 12),
-                          Text(
-                            'Ramen will save the world.',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
-                ])));
+                children: <Widget>[card1(context)])));
   }
+}
+
+Widget card1(BuildContext context) {
+  return Card(
+    child: Container(
+      padding: EdgeInsets.all(12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Ramen, whether soy sauce, salt, or miso, has an invaluable impact on your life.',
+            style: TextStyle(fontSize: 16),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'Ramen will save the world.',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    ),
+  );
 }
