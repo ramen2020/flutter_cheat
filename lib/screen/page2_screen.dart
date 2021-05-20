@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './button/buttons_screen.dart';
+import './card/card_screen.dart';
 import './checkbox/check_box_screen.dart';
 import './grid/grid_screen.dart';
 import './list/list_screen.dart';
@@ -31,6 +32,19 @@ class Page2 extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => const ButtonsScreen(),
+                        ));
+                  }),
+
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black87,
+                  ),
+                  child: Text('card_screen'),
+                  onPressed: () {
+                    Navigator.push<void>(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CardScreen(),
                         ));
                   }),
 

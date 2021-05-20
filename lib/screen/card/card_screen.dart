@@ -6,21 +6,33 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text('ButtonsScreen')),
         body: Container(
-            color: Colors.red[100],
+            padding: EdgeInsets.all(30),
+            color: Colors.red[200],
             alignment: Alignment.center,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                      color: Colors.red,
-                      alignment: Alignment.center,
+                  Card(
+                    child: Container(
+                      padding: EdgeInsets.all(12),
                       child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-
-                          ]))
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Ramen, whether soy sauce, salt, or miso, has an invaluable impact on your life.',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Ramen will save the world.',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ])));
   }
 }
