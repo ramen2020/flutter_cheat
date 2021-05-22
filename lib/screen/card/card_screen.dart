@@ -12,7 +12,34 @@ class CardScreen extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[card1(context)])));
+                children: <Widget>[
+                  card1(context),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Ramen',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            'Ramen will save the world.',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ])));
   }
 }
 
