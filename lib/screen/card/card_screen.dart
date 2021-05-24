@@ -11,13 +11,10 @@ class CardScreen extends StatelessWidget {
             padding: const EdgeInsets.all(30),
             color: Colors.red[200],
             alignment: Alignment.center,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  card1(context),
-                  card2(context),
-                ])));
+            child: ListView(children: [
+              card1(context),
+              card2(context),
+            ])));
   }
 }
 
