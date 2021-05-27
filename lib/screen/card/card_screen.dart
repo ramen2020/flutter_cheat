@@ -15,6 +15,29 @@ class CardScreen extends StatelessWidget {
               card1(context),
               card2(context),
               card3(context),
+              Card(
+                clipBehavior: Clip.antiAlias,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image(
+                      image: AssetImage('assets/ramen/ramen7.jpeg'),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    Text(
+                      'Ramen Card !!!',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ])));
   }
 }
