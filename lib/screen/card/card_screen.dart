@@ -114,27 +114,36 @@ Widget card3(BuildContext context) {
 }
 
 Widget card4(BuildContext context) {
-  return Card(
-    clipBehavior: Clip.antiAlias,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(24),
-    ),
-    child: Stack(
-      alignment: Alignment.center,
-      children: [
-        Image(
-          image: AssetImage('assets/ramen/ramen7.jpeg'),
-          fit: BoxFit.fitWidth,
+  return Container(
+    // shadow
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
+            spreadRadius: 1.0,
+            offset: Offset(0, 0))
+      ]),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
         ),
-        Text(
-          'Ramen Card !!!',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontSize: 24,
-          ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Image(
+              image: AssetImage('assets/ramen/ramen7.jpeg'),
+              fit: BoxFit.fitWidth,
+            ),
+            Text(
+              'Ramen Card !!!',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
         ),
-      ],
-    ),
-  );
+      ));
 }
