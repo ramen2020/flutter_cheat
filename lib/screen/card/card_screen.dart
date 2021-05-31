@@ -55,6 +55,19 @@ It generates adrenaline and improves performance.
                         style: TextStyle(fontSize: 16),
                       ),
                     ),
+                    ButtonBar(
+                      alignment: MainAxisAlignment.start,
+                      children: [
+                        TextButton(
+                          child: Text('about ramen'),
+                          onPressed: () {},
+                        ),
+                        TextButton(
+                          child: Text('place'),
+                          onPressed: () {},
+                        )
+                      ],
+                    )
                   ],
                 ),
               )
