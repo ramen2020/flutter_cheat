@@ -73,80 +73,85 @@ Widget card2(BuildContext context) {
 }
 
 Widget card3(BuildContext context) {
-  return Card(
-    shadowColor: Colors.red,
-    elevation: 8,
-    clipBehavior: Clip.antiAlias,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(24),
-    ),
-    child: Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.blueAccent, Colors.purple[300]],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
-      padding: EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Ramen Station',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            'Eating udon noodles at the ramen station',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
-Widget card4(BuildContext context) {
   return Container(
-      // shadow
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
-            color: Colors.black26,
-            blurRadius: 10.0,
-            spreadRadius: 1.0,
-            offset: Offset(0, 0))
-      ]),
+      padding: const EdgeInsets.all(30),
       child: Card(
+        shadowColor: Colors.red,
+        elevation: 8,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image(
-              image: AssetImage('assets/ramen/ramen7.jpeg'),
-              fit: BoxFit.fitWidth,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blueAccent, Colors.purple[300]],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            Text(
-              'Ramen Card !!!',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 24,
+          ),
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Ramen Station',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 4),
+              Text(
+                'Eating udon noodles at the ramen station',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       ));
+}
+
+Widget card4(BuildContext context) {
+  return Padding(
+      // shadowの上にpaddingつけないとおかしくなる。
+      padding: const EdgeInsets.all(16),
+      child: Container(
+          // shadow
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10.0,
+                spreadRadius: 1,
+                offset: Offset(0, 0))
+          ]),
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Image(
+                  image: AssetImage('assets/ramen/ramen7.jpeg'),
+                  fit: BoxFit.fitWidth,
+                ),
+                Text(
+                  'Ramen Card !!!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ],
+            ),
+          )));
 }
 
 Widget card5(BuildContext context) {
