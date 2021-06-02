@@ -16,61 +16,7 @@ class CardScreen extends StatelessWidget {
               card2(context),
               card3(context),
               card4(context),
-              Card(
-                clipBehavior: Clip.antiAlias,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(24),
-                ),
-                child: Column(
-                  children: [
-                    Stack(
-                      children: [
-                        Image(
-                          image: AssetImage('assets/ramen/ramen4.jpeg'),
-                          fit: BoxFit.fitWidth,
-                        ),
-                        Positioned(
-                          bottom: 15,
-                          // right: 16,
-                          left: 20,
-                          child: Text(
-                            'do you like ramen???',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 24,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(16).copyWith(bottom: 0),
-                      child: Text(
-                        '''
-How often do you eat ramen? Ramen has a positive effect on the body. 
-For example, it gives you energy. 
-It generates adrenaline and improves performance.
-                        ''',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ),
-                    ButtonBar(
-                      alignment: MainAxisAlignment.start,
-                      children: [
-                        TextButton(
-                          child: Text('about ramen'),
-                          onPressed: () {},
-                        ),
-                        TextButton(
-                          child: Text('place'),
-                          onPressed: () {},
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              )
+              card5(context),
             ])));
   }
 }
@@ -201,4 +147,62 @@ Widget card4(BuildContext context) {
           ],
         ),
       ));
+}
+
+Widget card5(BuildContext context) {
+  return Card(
+    clipBehavior: Clip.antiAlias,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(24),
+    ),
+    child: Column(
+      children: [
+        Stack(
+          children: [
+            Image(
+              image: AssetImage('assets/ramen/ramen4.jpeg'),
+              fit: BoxFit.fitWidth,
+            ),
+            Positioned(
+              bottom: 15,
+              // right: 16,
+              left: 20,
+              child: Text(
+                'do you like ramen???',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.all(16).copyWith(bottom: 0),
+          child: Text(
+            '''
+How often do you eat ramen? Ramen has a positive effect on the body. 
+For example, it gives you energy. 
+It generates adrenaline and improves performance.
+                        ''',
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
+        ButtonBar(
+          alignment: MainAxisAlignment.start,
+          children: [
+            TextButton(
+              child: Text('about ramen'),
+              onPressed: () {},
+            ),
+            TextButton(
+              child: Text('place'),
+              onPressed: () {},
+            )
+          ],
+        )
+      ],
+    ),
+  );
 }
