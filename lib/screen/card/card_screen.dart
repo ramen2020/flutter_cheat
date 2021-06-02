@@ -17,6 +17,8 @@ class CardScreen extends StatelessWidget {
               card3(context),
               card4(context),
               card5(context),
+              card6(context),
+              card7(context),
             ])));
   }
 }
@@ -209,5 +211,82 @@ It generates adrenaline and improves performance.
         )
       ],
     ),
+  );
+}
+
+Widget card6(BuildContext context) {
+  var heading = '\Popular Ramen';
+  var subheading = 'shibuya / Tokyo';
+  var cardImage = AssetImage('assets/ramen/ramen8.jpeg');
+  var supportingText = '''
+You will never know this ramen. It tastes normal.
+Rich is bad. The price is not cheap.
+But this ramen gives you power.
+The reason is that it is made from an energy drink.
+And the waitress is beautiful.Wow
+      ''';
+
+  return Card(
+      elevation: 4.0,
+      child: Column(
+        children: [
+          ListTile(
+            title: Text(heading),
+            subtitle: Text(subheading),
+            trailing: Icon(Icons.favorite),
+          ),
+          Container(
+            height: 200.0,
+            child: Ink.image(
+              image: cardImage,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(supportingText),
+          ),
+          ButtonBar(
+            children: [
+              TextButton(
+                child: const Text('CONTACT'),
+                onPressed: () {/* ... */},
+              ),
+              TextButton(
+                child: const Text('LEARN MORE'),
+                onPressed: () {/* ... */},
+              )
+            ],
+          )
+        ],
+      ));
+}
+
+Widget card7(BuildContext context) {
+  return Card(
+    child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
+      ListTile(
+        leading: Icon(Icons.place),
+        title: Text("Coffee flavored ramen"),
+        subtitle: Text("kyoto / kyoto-city"),
+      ),
+      Image(
+        image: AssetImage('assets/ramen/ramen4.jpeg'),
+        fit: BoxFit.fitWidth,
+      ),
+      ButtonBar(
+        children: <Widget>[
+          TextButton(
+            child: const Text('DIRECTION'),
+            onPressed: () {},
+          ),
+          TextButton(
+            child: const Text('MAP'),
+            onPressed: () {},
+          ),
+        ],
+      ),
+    ]),
   );
 }
