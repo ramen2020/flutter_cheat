@@ -264,29 +264,41 @@ And the waitress is beautiful.Wow
 }
 
 Widget card7(BuildContext context) {
-  return Card(
-    child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
-      ListTile(
-        leading: Icon(Icons.place),
-        title: Text("Coffee flavored ramen"),
-        subtitle: Text("kyoto / kyoto-city"),
-      ),
-      Image(
-        image: AssetImage('assets/ramen/ramen4.jpeg'),
-        fit: BoxFit.fitWidth,
-      ),
-      ButtonBar(
-        children: <Widget>[
-          TextButton(
-            child: const Text('DIRECTION'),
-            onPressed: () {},
-          ),
-          TextButton(
-            child: const Text('MAP'),
-            onPressed: () {},
-          ),
-        ],
-      ),
-    ]),
-  );
+  return Padding(
+      // shadowの上にpaddingつけないとおかしくなる。
+      padding: const EdgeInsets.all(16),
+      child: Container(
+          // shadow
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10.0,
+                spreadRadius: 1,
+                offset: Offset(0, 0))
+          ]),
+          child: Card(
+            child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.place),
+                title: Text("Coffee flavored ramen"),
+                subtitle: Text("kyoto / kyoto-city"),
+              ),
+              Image(
+                image: AssetImage('assets/ramen/ramen4.jpeg'),
+                fit: BoxFit.fitWidth,
+              ),
+              ButtonBar(
+                children: <Widget>[
+                  TextButton(
+                    child: const Text('DIRECTION'),
+                    onPressed: () {},
+                  ),
+                  TextButton(
+                    child: const Text('MAP'),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ]),
+          )));
 }
