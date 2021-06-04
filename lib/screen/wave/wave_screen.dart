@@ -37,20 +37,25 @@ class _WaveScreenState extends State<WaveScreen> with TickerProviderStateMixin {
         body: Container(
             color: Colors.pink[100],
             alignment: Alignment.center,
-            child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Column(children: [
-                    CustomPaint(
-                      painter: RipplePainter(
-                          _rippleAnimationController, 117, 81, 240),
-                      child: SizedBox(
-                        width: 300.0,
-                        height: 300.0,
-                      ),
-                    )
-                  ]),
-                ])));
+            child: ListView(children: [
+              Column(children: [
+                CustomPaint(
+                  painter:
+                      RipplePainter(_rippleAnimationController, 117, 81, 240),
+                  child: SizedBox(
+                    width: 300.0,
+                    height: 300.0,
+                  ),
+                ),
+                CustomPaint(
+                  painter:
+                      RipplePainter(_rippleAnimationController, 151, 101, 140),
+                  child: SizedBox(
+                    width: 300.0,
+                    height: 300.0,
+                  ),
+                )
+              ]),
+            ])));
   }
 }
