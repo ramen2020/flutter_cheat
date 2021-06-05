@@ -12,15 +12,15 @@ class Page3 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // 画面遷移
-              ElevatedButton(
-                  child: Text('ScrollViewScreen'),
-                  onPressed: () {
-                    Navigator.push<void>(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ScrollViewScreen(),
-                        ));
-                  }),
+              // ElevatedButton(
+              //     child: Text('ScrollViewScreen'),
+              //     onPressed: () {
+              //       Navigator.push<void>(
+              //           context,
+              //           MaterialPageRoute(
+              //             builder: (context) => ScrollViewScreen(),
+              //           ));
+              //     }),
 
               // ElevatedButton(
               //   child: Text('checkbox_screen'),
