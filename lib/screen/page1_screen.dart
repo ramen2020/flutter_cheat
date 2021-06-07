@@ -293,6 +293,9 @@ Widget showModalBottomSheetButton(BuildContext context) {
 Widget modalButton(BuildContext context) {
   return ElevatedButton(
     child: const Text('modal'),
+    style: ElevatedButton.styleFrom(
+      primary: Colors.green[300],
+    ),
     onPressed: () {
       Navigator.push<void>(
           context,
