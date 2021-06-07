@@ -40,17 +40,7 @@ class Page1 extends StatelessWidget {
             // ハーフモーダル showModalBottomSheet
             showModalBottomSheetButton(context),
             // モーダル遷移
-            ElevatedButton(
-              child: const Text('modal'),
-              onPressed: () {
-                Navigator.push<void>(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => CardScreen(),
-                      fullscreenDialog: true, // modal toransition
-                    ));
-              },
-            ),
+            modalButton(context),
             // indicator
             indicatorButton(context),
           ]),
@@ -297,6 +287,21 @@ Widget showModalBottomSheetButton(BuildContext context) {
           },
         );
       });
+}
+
+// ハーフモーダル showModalBottomSheet
+Widget modalButton(BuildContext context) {
+  return ElevatedButton(
+    child: const Text('modal'),
+    onPressed: () {
+      Navigator.push<void>(
+          context,
+          MaterialPageRoute(
+            builder: (_) => CardScreen(),
+            fullscreenDialog: true, // modal toransition
+          ));
+    },
+  );
 }
 
 // indicator
