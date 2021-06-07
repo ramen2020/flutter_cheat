@@ -51,7 +51,7 @@ class Page1 extends StatelessWidget {
 Widget popUpButton(BuildContext context) {
   return ElevatedButton(
       child: const Text(
-        'AlertDialog',
+        'PopUp',
         style: TextStyle(
           color: Colors.red,
         ),
@@ -60,21 +60,36 @@ Widget popUpButton(BuildContext context) {
         primary: Colors.yellow, //ボタンの背景色
       ),
       onPressed: () async {
-        await showDialog<void>(
+        await showDialog<int>(
             context: context,
             builder: (context) {
-              Column(
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   AlertDialog(
-                    title: Text("タイトル"),
+                    title: Text("Popular Ramen"),
                     content: SingleChildScrollView(
                       child: ListBody(
                         children: <Widget>[
                           Column(children: <Widget>[
                             // コンテンツ
-                            Text("テストです"),
-                            Text("テストです"),
-                            Text("テストです"),
+                            card7(context),
+                            Padding(
+                              padding: EdgeInsets.all(15),
+                              child: Text(
+                                'Comment.',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                ),
+                              ),
+                            ),
+
+                            Text('''
+This ramen is dangerous. If you eat it, you will get the power that can destroy the world.Are you ready for this?
+                            '''),
                           ]),
                         ],
                       ),
