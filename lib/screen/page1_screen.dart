@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import './page6_screen.dart';
+import './card/card_screen.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key key}) : super(key: key);
@@ -38,6 +39,18 @@ class Page1 extends StatelessWidget {
             showBottomSheetButton(context),
             // ハーフモーダル showModalBottomSheet
             showModalBottomSheetButton(context),
+            // モーダル遷移
+            ElevatedButton(
+              child: const Text('modal'),
+              onPressed: () {
+                Navigator.push<void>(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => CardScreen(),
+                      fullscreenDialog: true, // modal toransition
+                    ));
+              },
+            ),
             // indicator
             indicatorButton(context),
           ]),
