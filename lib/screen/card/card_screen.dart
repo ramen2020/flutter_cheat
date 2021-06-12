@@ -279,7 +279,17 @@ Widget card7(BuildContext context) {
           child: Card(
             child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
               ListTile(
-                leading: Icon(Icons.place),
+                leading: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/ramen/ramen4.jpeg'),
+                    ),
+                  ),
+                ),
                 title: Text("Coffee flavored ramen"),
                 subtitle: Text("kyoto / kyoto-city"),
               ),
