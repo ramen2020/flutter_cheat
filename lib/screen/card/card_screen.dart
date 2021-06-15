@@ -8,7 +8,7 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: const Text('ButtonsScreen')),
         body: Container(
-            padding: const EdgeInsets.all(30),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             color: Colors.red[200],
             alignment: Alignment.center,
             child: ListView(children: [
