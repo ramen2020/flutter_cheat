@@ -33,6 +33,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  webview_flutter:
   flutter_lints:
 
 # For information on the generic Dart part of this file, see the
