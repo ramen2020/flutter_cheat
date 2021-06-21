@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import './scrollview/scroll_view_screen.dart';
+import './webview/webview_screen.dart';
 
 class Page3 extends StatelessWidget {
   @override
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Container(
         color: Colors.red,
         alignment: Alignment.center,
@@ -12,15 +12,15 @@ class Page3 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // 画面遷移
-              // ElevatedButton(
-              //     child: Text('ScrollViewScreen'),
-              //     onPressed: () {
-              //       Navigator.push<void>(
-              //           context,
-              //           MaterialPageRoute(
-              //             builder: (context) => ScrollViewScreen(),
-              //           ));
-              //     }),
+              ElevatedButton(
+                  child: Text('WebViewScreen'),
+                  onPressed: () {
+                    Navigator.push<void>(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => WebViewScreen(),
+                        ));
+                  }),
 
               // ElevatedButton(
               //   child: Text('checkbox_screen'),
