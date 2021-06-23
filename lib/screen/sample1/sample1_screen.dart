@@ -102,7 +102,7 @@ Widget _items(BuildContext context, String title, String subTitle) {
                 },
               )
             ]),
-        const SizedBox(height: 30),
+        const SizedBox(height: 15),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
           child: Row(
