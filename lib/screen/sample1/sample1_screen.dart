@@ -14,7 +14,6 @@ class Sample1Screen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    // user登録ボタン
                     _userRegisterBtn(context),
                     _items(context, 'New', 'go new'),
                     const SizedBox(height: 30),
@@ -32,29 +31,30 @@ class Sample1Screen extends StatelessWidget {
 Widget _userRegisterBtn(BuildContext context) {
   return Container(
     padding: const EdgeInsets.only(
-      top: 30,
       bottom: 30,
-      right: 30,
-      left: 30,
     ),
-    child: SizedBox(
-        width: 300,
-        height: 70,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: const Color(0x4CFFFFFF),
-          ),
-          child: const Text(
-            'Smaple1',
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        Image(
+          image: AssetImage('assets/ramen/ramen1.jpeg'),
+          fit: BoxFit.fitWidth,
+        ),
+        Positioned(
+          bottom: 15,
+          // right: 16,
+          left: 20,
+          child: Text(
+            'Ramen sample',
             style: TextStyle(
-              color: Color(0xFF302D2D),
-              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 40,
             ),
           ),
-          onPressed: () {
-            Navigator.pushNamed(context, '/news');
-          },
-        )),
+        ),
+      ],
+    ),
   );
 }
 
