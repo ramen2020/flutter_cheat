@@ -21,6 +21,7 @@ class Sample1Screen extends StatelessWidget {
                     _items(context, 'Infomation', 'go infomation'),
                     const SizedBox(height: 30),
                     _items(context, 'Event', 'go event'),
+                    const SizedBox(height: 30),
                   ],
                 ),
               ))),
@@ -71,7 +72,10 @@ Widget _items(BuildContext context, String title, String subTitle) {
         Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(title),
+              Text(
+                title,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
 
               // subtitle
               ElevatedButton(
@@ -82,7 +86,8 @@ Widget _items(BuildContext context, String title, String subTitle) {
                   subTitle,
                   style: const TextStyle(
                     color: Color(0xFF302D2D),
-                    fontSize: 12,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 onPressed: () {
