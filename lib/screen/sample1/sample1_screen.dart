@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../card/card_screen.dart';
 
 class Sample1Screen extends StatelessWidget {
   @override
@@ -108,21 +109,27 @@ Widget _items(BuildContext context, String title, String subTitle) {
           child: Row(
             children: [
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen1.jpeg')),
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen2.jpeg')),
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen3.jpeg')),
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen4.jpeg')),
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen7.jpeg')),
               _cardWidget(
+                  context: context,
                   color: Colors.blueGrey,
                   image: AssetImage('assets/ramen/ramen8.jpeg')),
             ],
@@ -131,17 +138,62 @@ Widget _items(BuildContext context, String title, String subTitle) {
       ]));
 }
 
-Widget _cardWidget({double size = 150, Color color, AssetImage image}) {
+Widget _cardWidget(
+    {context, double size = 150, Color color, AssetImage image}) {
   return Container(
-    color: color,
-    width: size,
-    height: size,
-    margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-    child: Center(
-      child: Image(
-        image: image,
-        fit: BoxFit.fitWidth,
-      ),
-    ),
-  );
+      color: color,
+      width: size,
+      height: size,
+      margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+      child: Center(
+        child: GestureDetector(
+          onTap: () async {
+            await showDialog<int>(
+                context: context,
+                builder: (context) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      AlertDialog(
+                        title: Text("Popular Ramen"),
+                        content: SingleChildScrollView(
+                          child: ListBody(
+                            children: <Widget>[
+                              Column(children: <Widget>[
+                                // コンテンツ
+                                card7(context),
+                                Padding(
+                                  padding: EdgeInsets.all(15),
+                                  child: Text(
+                                    'Comment.',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: Colors.black87,
+                                    ),
+                                  ),
+                                ),
+
+                                Text('''
+This ramen is dangerous. If you eat it, you will get the power that can destroy the world.Are you ready for this?
+                            '''),
+                              ]),
+                            ],
+                          ),
+                        ),
+                        actions: <Widget>[
+                          // ボタン
+                        ],
+                      ),
+                    ],
+                  );
+                });
+          },
+          child: Image(
+            image: image,
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+      ));
 }
