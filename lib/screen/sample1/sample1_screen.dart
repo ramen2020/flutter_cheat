@@ -14,7 +14,7 @@ class Sample1Screen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _userRegisterBtn(context),
+                    _title(context),
                     _items(context, 'New', 'go new'),
                     const SizedBox(height: 30),
                     _items(context, 'Infomation', 'go infomation'),
@@ -28,7 +28,7 @@ class Sample1Screen extends StatelessWidget {
   }
 }
 
-Widget _userRegisterBtn(BuildContext context) {
+Widget _title(BuildContext context) {
   return Container(
     padding: const EdgeInsets.only(
       bottom: 30,
