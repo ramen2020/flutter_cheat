@@ -33,7 +33,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
-  final List<Widget> _children = [Page1(), Page2(), Page3(), Page4(), Page5()];
+  final List<Widget> _children = [
+    Page1(),
+    Page2(),
+    Page3(),
+    SamplePage(),
+    Page5()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Page3'),
             BottomNavigationBarItem(
               icon: Icon(Icons.offline_bolt),
-              label: 'Page4',
+              label: 'SamplePage',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.edit_attributes),
