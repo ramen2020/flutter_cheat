@@ -6,42 +6,59 @@ class Sample1Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sample1Screen'),
-      ),
-      body: SingleChildScrollView(
-          child: Container(
-              color: Colors.grey[200],
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    _title(context),
-                    _items(context, 'New', 'go new'),
-                    const SizedBox(height: 30),
-                    _items(context, 'Infomation', 'go infomation'),
-                    const SizedBox(height: 30),
-                    _items(context, 'Event', 'go event'),
-                    const SizedBox(height: 30),
-                  ],
+        body: CustomScrollView(slivers: <Widget>[
+      SliverAppBar(
+          expandedHeight: 240,
+          flexibleSpace: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image.asset('assets/ramen/ramen1.jpeg', fit: BoxFit.cover),
+              Positioned(
+                bottom: 15,
+                left: 20,
+                child: Text(
+                  'Ramen sample',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 40,
+                  ),
                 ),
-              ))),
-    );
+              ),
+            ],
+          )
+          // _title(context),
+          ),
+      SliverList(
+          delegate: SliverChildListDelegate([
+        SingleChildScrollView(
+            child: Container(
+                color: Colors.grey[200],
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      // _title(context),
+                      _items(context, 'New', 'go new'),
+                      const SizedBox(height: 30),
+                      _items(context, 'Infomation', 'go infomation'),
+                      const SizedBox(height: 30),
+                      _items(context, 'Event', 'go event'),
+                      const SizedBox(height: 30),
+                    ],
+                  ),
+                ))),
+      ]))
+    ]));
   }
 }
 
 Widget _title(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.only(
-      bottom: 30,
-    ),
     child: Stack(
       alignment: Alignment.center,
       children: [
-        Image(
-          image: AssetImage('assets/ramen/ramen1.jpeg'),
-          fit: BoxFit.fitWidth,
-        ),
+        Image(image: AssetImage('assets/ramen/ramen1.jpeg'), fit: BoxFit.cover),
         Positioned(
           bottom: 15,
           // right: 16,
