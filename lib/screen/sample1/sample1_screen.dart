@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
 import '../card/card_screen.dart';
 
 class Sample1Screen extends StatelessWidget {
@@ -141,10 +142,12 @@ Widget _items(BuildContext context, String title, String subTitle) {
 Widget _cardWidget(
     {context, double size = 150, Color color, AssetImage image}) {
   return Container(
-      color: color,
+      // color: color,
       width: size,
       height: size,
       margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(8.0)),
       child: Center(
         child: GestureDetector(
           onTap: () async {
