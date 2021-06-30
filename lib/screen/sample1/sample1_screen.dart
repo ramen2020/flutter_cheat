@@ -27,9 +27,7 @@ class Sample1Screen extends StatelessWidget {
                 ),
               ),
             ],
-          )
-          // _title(context),
-          ),
+          )),
       SliverList(
           delegate: SliverChildListDelegate([
         SingleChildScrollView(
@@ -39,7 +37,6 @@ class Sample1Screen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      // _title(context),
                       _items(context, 'New', 'go new'),
                       const SizedBox(height: 30),
                       _items(context, 'Infomation', 'go infomation'),
@@ -64,7 +61,6 @@ Widget _title(BuildContext context) {
         Image(image: AssetImage('assets/ramen/ramen1.jpeg'), fit: BoxFit.cover),
         Positioned(
           bottom: 15,
-          // right: 16,
           left: 20,
           child: Text(
             'Ramen sample',
@@ -126,7 +122,7 @@ Widget _items(BuildContext context, String title, String subTitle) {
             ]),
         const SizedBox(height: 15),
         SingleChildScrollView(
-          scrollDirection: Axis.horizontal, // スクロールの向きを水平方向に指定
+          scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               _cardWidget(
@@ -162,7 +158,6 @@ Widget _items(BuildContext context, String title, String subTitle) {
 Widget _cardWidget(
     {context, double size = 150, Color color, AssetImage image}) {
   return Container(
-      // color: color,
       width: size,
       height: size,
       margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
@@ -184,7 +179,6 @@ Widget _cardWidget(
                           child: ListBody(
                             children: <Widget>[
                               Column(children: <Widget>[
-                                // コンテンツ
                                 card7(context),
                                 Padding(
                                   padding: EdgeInsets.all(15),
