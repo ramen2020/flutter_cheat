@@ -8,6 +8,7 @@ class Sample1Screen extends StatelessWidget {
     return Scaffold(
         body: CustomScrollView(slivers: <Widget>[
       SliverAppBar(
+          brightness: Brightness.dark,
           expandedHeight: 240,
           flexibleSpace: Stack(
             fit: StackFit.expand,
