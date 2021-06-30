@@ -46,6 +46,8 @@ class Sample1Screen extends StatelessWidget {
                       const SizedBox(height: 30),
                       _items(context, 'Event', 'go event'),
                       const SizedBox(height: 30),
+                      _items(context, 'Ramen', 'Ramen event'),
+                      const SizedBox(height: 30),
                     ],
                   ),
                 ))),
