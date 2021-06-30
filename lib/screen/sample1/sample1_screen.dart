@@ -53,29 +53,6 @@ class Sample1Screen extends StatelessWidget {
   }
 }
 
-Widget _title(BuildContext context) {
-  return Container(
-    child: Stack(
-      alignment: Alignment.center,
-      children: [
-        Image(image: AssetImage('assets/ramen/ramen1.jpeg'), fit: BoxFit.cover),
-        Positioned(
-          bottom: 15,
-          left: 20,
-          child: Text(
-            'Ramen sample',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: 40,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
 Widget _items(BuildContext context, String title, String subTitle) {
   return Container(
       padding: const EdgeInsets.only(
