@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './webview/webview_screen.dart';
 import './sample1/sample1_screen.dart';
+import './sample1/sample2_screen.dart';
 
 class Page3 extends StatelessWidget {
   @override
