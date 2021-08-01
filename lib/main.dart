@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screen/page1_screen.dart';
 import 'screen/page2_screen.dart';
-import 'screen/page3_screen.dart';
+import 'screen/sample_screen.dart';
 import 'screen/page4_screen.dart';
 import 'screen/page5_screen.dart';
 
@@ -36,9 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _children = [
     Page1(),
     Page2(),
-    Page3(),
-    SamplePage(),
-    Page5()
+    SampleScreen(),
+    // Page4(),
+    // Page5()
   ];
 
   @override
@@ -68,15 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add_call),
               label: 'Page2',
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Page3'),
+            // BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Page3'),
             BottomNavigationBarItem(
               icon: Icon(Icons.offline_bolt),
               label: 'SamplePage',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.edit_attributes),
-              label: 'Page5',
-            )
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.edit_attributes),
+            //   label: 'Page5',
+            // )
           ],
         ),
       ),
