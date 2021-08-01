@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './sample1/sample1_screen.dart';
+import './sample/sample1_screen.dart';
 
-class SamplePage extends StatelessWidget {
+class Page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
