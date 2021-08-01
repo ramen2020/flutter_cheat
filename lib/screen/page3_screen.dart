@@ -33,16 +33,16 @@ class Page3 extends StatelessWidget {
                         ));
                   }),
 
-              // ElevatedButton(
-              //   child: Text('checkbox_screen'),
-              //   onPressed: () {
-              //     Navigator.push(
-              //         context,
-              //         MaterialPageRoute(
-              //           builder: (context) => CheckBoxScreen(),
-              //         ));
-              //   },
-              // )
+              ElevatedButton(
+                child: Text('Sample2'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Sample2Screen(),
+                      ));
+                },
+              )
             ]));
   }
 }
