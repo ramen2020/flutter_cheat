@@ -35,10 +35,65 @@ class Sample2Screen extends StatelessWidget {
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[],
+                    children: <Widget>[
+                      _items(context),
+                    ],
                   ),
                 ))),
       ]))
     ]));
   }
+}
+
+Widget _items(BuildContext context) {
+  final couponList = [
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+    _cardWidget(context),
+  ];
+
+  return Container(
+    padding: const EdgeInsets.only(
+      top: 20,
+      bottom: 20,
+      right: 30,
+      left: 30,
+    ),
+    color: Colors.white,
+    child: GridView.count(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      crossAxisCount: 2,
+      crossAxisSpacing: 4,
+      mainAxisSpacing: 4,
+      children: couponList,
+    ),
+  );
+}
+
+Widget _cardWidget(BuildContext context) {
+  return Material(
+    color: Colors.blueGrey,
+    child: InkWell(
+        splashColor: Colors.blueAccent,
+        onTap: () {},
+        child: Container(
+          margin: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+          child: const Center(
+            child: Text(
+              'image',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+          ),
+        )),
+  );
 }
