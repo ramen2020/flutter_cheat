@@ -153,7 +153,7 @@ Widget _imageDetail(BuildContext context) {
               primary: const Color(0xFF302D2D),
             ),
             child: const Text(
-              'このクーポンをセットする',
+              "what's this image???",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 13,
