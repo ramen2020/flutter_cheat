@@ -82,18 +82,90 @@ Widget _cardWidget(BuildContext context) {
     color: Colors.blueGrey,
     child: InkWell(
         splashColor: Colors.blueAccent,
-        onTap: () {},
+        onTap: () {
+          _onItemDetailModal(context);
+        },
         child: Container(
           margin: const EdgeInsets.fromLTRB(0, 10, 10, 0),
           child: const Center(
             child: Text(
               'image',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 48,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
           ),
         )),
+  );
+}
+
+void _onItemDetailModal(BuildContext context) {
+  showModalBottomSheet<void>(
+      // isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Container(
+            // height: 5000,
+            child: Column(
+          children: <Widget>[
+            _imageDetail(context),
+          ],
+        ));
+      });
+}
+
+Widget _imageDetail(BuildContext context) {
+  void showProgressDialog() {
+    showGeneralDialog(
+        context: context,
+        barrierDismissible: false,
+        transitionDuration: const Duration(milliseconds: 300),
+        barrierColor: Colors.black.withOpacity(0.5),
+        pageBuilder: (BuildContext context, Animation animation,
+            Animation secondaryAnimation) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        });
+  }
+
+  return Column(
+    children: <Widget>[
+      Container(
+        color: Colors.amberAccent,
+        width: 300,
+        height: 200,
+        margin: const EdgeInsets.fromLTRB(20, 40, 20, 40),
+        child: const Center(
+          child: Text(
+            'image',
+            style: const TextStyle(
+                fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+        ),
+      ),
+      SizedBox(
+          width: 250,
+          height: 50,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: const Color(0xFF302D2D),
+            ),
+            child: const Text(
+              'このクーポンをセットする',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+              ),
+            ),
+            onPressed: () async {
+              showProgressDialog();
+              await Future<dynamic>.delayed(const Duration(seconds: 2));
+              Navigator.pop(context);
+              Navigator.pop(context);
+            },
+          )),
+    ],
   );
 }
