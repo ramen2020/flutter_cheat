@@ -12,7 +12,7 @@ class Sample2Screen extends StatelessWidget {
           flexibleSpace: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset('assets/ramen/ramen1.jpeg', fit: BoxFit.cover),
+              Image.asset('assets/ramen/ramen3.jpeg', fit: BoxFit.cover),
               Positioned(
                 bottom: 15,
                 left: 20,
@@ -46,7 +46,7 @@ class Sample2Screen extends StatelessWidget {
 }
 
 Widget _items(BuildContext context) {
-  final couponList = [
+  final girdList = [
     _cardWidget(context),
     _cardWidget(context),
     _cardWidget(context),
@@ -72,32 +72,61 @@ Widget _items(BuildContext context) {
       crossAxisCount: 2,
       crossAxisSpacing: 4,
       mainAxisSpacing: 4,
-      children: couponList,
+      children: girdList,
     ),
   );
 }
 
 Widget _cardWidget(BuildContext context) {
-  return Material(
-    color: Colors.blueGrey,
-    child: InkWell(
-        splashColor: Colors.blueAccent,
-        onTap: () {
-          _onItemDetailModal(context);
-        },
-        child: Container(
-          margin: const EdgeInsets.fromLTRB(0, 10, 10, 0),
-          child: const Center(
-            child: Text(
-              'image',
-              style: TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+  return InkWell(
+      splashColor: Colors.blueAccent,
+      onTap: () {
+        _onItemDetailModal(context);
+      },
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Image(
+                  image: AssetImage('assets/ramen/ramen7.jpeg'),
+                  fit: BoxFit.fitWidth,
+                ),
+                Positioned(
+                  bottom: 15,
+                  // right: 16,
+                  left: 20,
+                  child: Text(
+                    'do you ramen???',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
-        )),
-  );
+            Expanded(
+              child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Column(children: [
+                    Text(
+                      'beautiful ramen',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ])),
+            ),
+          ],
+        ),
+      ));
 }
 
 void _onItemDetailModal(BuildContext context) {
