@@ -108,15 +108,29 @@ Widget _cardWidget(BuildContext context) {
             ),
             Expanded(
               child: Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
                   child: Column(children: [
-                    Text(
-                      'beautiful ramen',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'harazyuku ramen',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey[700],
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ]),
+                    Padding(
+                        padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                        child: Text(
+                          'free drink',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
                   ])),
             ),
           ],
