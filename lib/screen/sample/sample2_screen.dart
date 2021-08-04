@@ -60,7 +60,6 @@ Widget _items(BuildContext context) {
 
   return Container(
     padding: const EdgeInsets.only(
-      top: 20,
       bottom: 20,
       right: 30,
       left: 30,
@@ -165,12 +164,27 @@ Widget _imageDetail(BuildContext context) {
         color: Colors.amberAccent,
         width: 300,
         height: 200,
-        margin: const EdgeInsets.fromLTRB(20, 40, 20, 40),
+        margin: const EdgeInsets.fromLTRB(20, 30, 20, 10),
         child: const Center(
-          child: Text(
-            'image',
-            style: const TextStyle(
-                fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),
+          child: Image(
+            image: AssetImage('assets/ramen/ramen7.jpeg'),
+            fit: BoxFit.fitWidth,
+          ),
+        ),
+      ),
+      Container(
+        width: 300,
+        // height: 200,
+        margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+        child: const Text(
+          '''
+Have you ever heard of this ramen that exists in Harajuku?
+This ramen is a soy sauce ramen that is limited to 50 servings a day. 
+The name of the store is "Ramen will save the world".
+          ''',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
           ),
         ),
       ),
@@ -182,10 +196,10 @@ Widget _imageDetail(BuildContext context) {
               primary: const Color(0xFF302D2D),
             ),
             child: const Text(
-              "what's this image???",
+              "what's this ramen???",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 13,
+                fontSize: 16,
               ),
             ),
             onPressed: () async {
