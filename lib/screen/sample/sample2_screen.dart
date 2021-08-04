@@ -17,7 +17,7 @@ class Sample2Screen extends StatelessWidget {
                 bottom: 15,
                 left: 20,
                 child: Text(
-                  'Ramen sample',
+                  'Ramen sample2',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
