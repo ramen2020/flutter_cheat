@@ -18,7 +18,7 @@ class Sample1Screen extends StatelessWidget {
                 bottom: 15,
                 left: 20,
                 child: Text(
-                  'Ramen sample',
+                  'Ramen sample1',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -168,7 +168,6 @@ Widget _cardWidget(
                                     ),
                                   ),
                                 ),
-
                                 Text('''
 This ramen is dangerous. If you eat it, you will get the power that can destroy the world.Are you ready for this?
                             '''),
