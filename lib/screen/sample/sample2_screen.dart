@@ -30,16 +30,13 @@ class Sample2Screen extends StatelessWidget {
       SliverList(
           delegate: SliverChildListDelegate([
         SingleChildScrollView(
-            child: Container(
-                color: Colors.grey[200],
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      _items(context),
-                    ],
-                  ),
-                ))),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _items(context),
+            ],
+          ),
+        ),
       ]))
     ]));
   }
@@ -64,7 +61,6 @@ Widget _items(BuildContext context) {
       right: 30,
       left: 30,
     ),
-    color: Colors.white,
     child: GridView.count(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -130,11 +126,10 @@ Widget _cardWidget(BuildContext context) {
 
 void _onItemDetailModal(BuildContext context) {
   showModalBottomSheet<void>(
-      // isScrollControlled: true,
+      // isScrollControlled: true, フルスクリーン
       context: context,
       builder: (context) {
         return Container(
-            // height: 5000,
             child: Column(
           children: <Widget>[
             _imageDetail(context),
@@ -174,7 +169,6 @@ Widget _imageDetail(BuildContext context) {
       ),
       Container(
         width: 300,
-        // height: 200,
         margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
         child: const Text(
           '''
