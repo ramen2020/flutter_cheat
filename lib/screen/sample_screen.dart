@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'webview/webview_screen.dart';
 import 'sample/sample1_screen.dart';
 import 'sample/sample2_screen.dart';
 
@@ -13,17 +12,6 @@ class SampleScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // 画面遷移
-              ElevatedButton(
-                  child: Text('WebViewScreen'),
-                  onPressed: () {
-                    Navigator.push<void>(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WebViewScreen(),
-                        ));
-                  }),
-
               ElevatedButton(
                   child: Text('Sample1'),
                   onPressed: () {
@@ -33,7 +21,6 @@ class SampleScreen extends StatelessWidget {
                           builder: (context) => Sample1Screen(),
                         ));
                   }),
-
               ElevatedButton(
                 child: Text('Sample2'),
                 onPressed: () {

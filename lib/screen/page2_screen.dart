@@ -8,6 +8,7 @@ import './progress/progress_screen.dart';
 import './scrollview/scroll_view_screen.dart';
 import './slider/slider_view_screen.dart';
 import './wave/wave_screen.dart';
+import './webview/webview_screen.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key key}) : super(key: key);
@@ -164,6 +165,34 @@ class Page2 extends StatelessWidget {
                   onPrimary: Colors.white,
                 ),
                 onPressed: () {},
+              ),
+
+              ElevatedButton(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Colors.red[700],
+                        Colors.red[700],
+                        Colors.red[500],
+                        Colors.red[300],
+                        Colors.red[300],
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.all(10),
+                  child: const Text('WebViewScreen'),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.all(0),
+                ),
+                onPressed: () {
+                  Navigator.push<void>(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => WebViewScreen(),
+                      ));
+                },
               ),
             ]));
   }
