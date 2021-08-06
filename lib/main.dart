@@ -36,9 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _children = [
     Page1(),
     Page2(),
+    Page4(),
     SampleScreen(),
-    // Page4(),
-    // Page5()
   ];
 
   @override
@@ -68,15 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add_call),
               label: 'Page2',
             ),
-            // BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Page3'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Page4'),
             BottomNavigationBarItem(
               icon: Icon(Icons.offline_bolt),
               label: 'SamplePage',
             ),
-            // BottomNavigationBarItem(
-            //   icon: Icon(Icons.edit_attributes),
-            //   label: 'Page5',
-            // )
           ],
         ),
       ),
