@@ -5,6 +5,7 @@ import './checkbox/check_box_screen.dart';
 import './grid/grid_screen.dart';
 import './list/list_screen.dart';
 import './progress/progress_screen.dart';
+import './refreshIndicator/refreshIndicator_screen.dart';
 import './scrollview/scroll_view_screen.dart';
 import './slider/slider_view_screen.dart';
 import './wave/wave_screen.dart';
@@ -159,12 +160,18 @@ class Page2 extends StatelessWidget {
                   Icons.dangerous,
                   color: Colors.white,
                 ),
-                label: const Text('Button'),
+                label: const Text('RefreshIndicatorScreen'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.red,
                   onPrimary: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push<void>(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RefreshIndicatorScreen(),
+                      ));
+                },
               ),
 
               ElevatedButton(
