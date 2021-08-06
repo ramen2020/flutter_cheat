@@ -1,25 +1,38 @@
 import 'package:flutter/material.dart';
 import './sample/sample1_screen.dart';
 
-class Page4 extends StatelessWidget {
+class Page4 extends StatefulWidget {
+  @override
+  _Page4State createState() => _Page4State();
+}
+
+class _Page4State extends State<Page4> {
+  List _titleList = ["test"];
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.blue[100],
-        alignment: Alignment.center,
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              ElevatedButton(
-                  child: Text('Sample1'),
-                  onPressed: () {
-                    Navigator.push<void>(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Sample1Screen(),
-                        ));
-                  }),
-            ]));
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('sample'),
+      ),
+      body: RefreshIndicator(
+        onRefresh: () async {
+          await _addText();
+        },
+        child: ListView(
+          children: _titleList
+              .map((title) => ListTile(
+                    title: Text(title),
+                  ))
+              .toList(),
+        ),
+      ),
+    );
+  }
+
+  _addText() {
+    setState(() {
+      _titleList.add("test");
+    });
   }
 }
