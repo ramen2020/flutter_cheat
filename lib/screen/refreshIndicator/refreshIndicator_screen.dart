@@ -6,7 +6,7 @@ class RefreshIndicatorScreen extends StatefulWidget {
 }
 
 class _RefreshIndicatorScreenState extends State<RefreshIndicatorScreen> {
-  List _titleList = ["test"];
+  List _titleList = ["下に引っ張って（スワイプ）ください"];
 
   @override
   Widget build(BuildContext context) {
