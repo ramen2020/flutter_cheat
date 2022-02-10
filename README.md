@@ -4,32 +4,37 @@ It is still under development, so we will update it as needed.
 
 ## components example...
 
-## components example...
-
 ### card
-![flutter_cheat_cards](https://user-images.githubusercontent.com/74945210/153547832-1c806f65-f8d0-4986-b564-be1c130796d9.gif)
+
+![flutter_cheat_cards](https://user-images.githubusercontent.com/74945210/153549339-9e434a85-504a-45a3-8c4b-7dedeb6cf328.gif)
 
 A card with an image and a message that you see often.
 
 ### checkbox
 
-![flutter_cheat_checkbox](https://user-images.githubusercontent.com/74945210/153547842-0ef0327d-5fc9-4e9e-a1a9-fe1eb890230c.gif)
+![flutter_cheat_checkbox](https://user-images.githubusercontent.com/74945210/153549355-b12e215d-a767-44ed-865b-01013ae46710.gif)
 
 Checkboxes that are so cute, you can't help but press them.
 
 ### Frequently viewed page 1
 
-![flutter_cheat_example1](https://user-images.githubusercontent.com/74945210/153547843-0eb3c01d-0cfd-4b99-b814-d46b60278801.gif)
+![flutter_cheat_example1](https://user-images.githubusercontent.com/74945210/153549359-441373e4-e6f1-45b6-8e55-25cc5dec609f.gif)
+
+Grid screens commonly used in applications.
 
 ### Frequently viewed page 2
 
-![flutter_cheat_example2](https://user-images.githubusercontent.com/74945210/153547845-623aa2d8-8f2f-4803-afd5-511e1aa7c2e3.gif)
+![flutter_cheat_example2](https://user-images.githubusercontent.com/74945210/153549364-7b2ecd49-da1e-40ba-94a8-8873b93daee3.gif)
+
+Version 2 of the Grid screen, which is often used in applications.
 
 ### popup
-![flutter_cheat_popup](https://user-images.githubusercontent.com/74945210/153547847-044cba86-7e13-4476-9670-78044a7edb20.gif)
+![flutter_cheat_popup](https://user-images.githubusercontent.com/74945210/153549366-d6376575-e9e1-42bf-b0e6-bc849f76aa87.gif)
 
 ### wave
 
-![flutter_cheat_wave](https://user-images.githubusercontent.com/74945210/153547848-79b1d02f-73bc-4b87-8092-05fde023eeda.gif)
+![flutter_cheat_wave](https://user-images.githubusercontent.com/74945210/153549367-a5a58a44-4bad-4d4a-9256-5eac556a0738.gif)
 
 An animation that is often attached to people talking on a call chat application.
+
+
