@@ -4,36 +4,32 @@ It is still under development, so we will update it as needed.
 
 ## components example...
 
-### pull refresh
+## components example...
 
-![swift_cheat_pull_refresh](https://user-images.githubusercontent.com/62822536/150671181-dbe26d5e-5c14-41c6-9cc1-337fe003bfda.gif)
+### card
+![flutter_cheat_cards](https://user-images.githubusercontent.com/74945210/153547832-1c806f65-f8d0-4986-b564-be1c130796d9.gif)
 
-pullreflesh to run the api
+A card with an image and a message that you see often.
 
-### skelton
+### checkbox
 
-![swift_cheat_skelton](https://user-images.githubusercontent.com/62822536/150671176-2d4ee522-f94e-45a3-8e56-8816cee44c62.gif)
+![flutter_cheat_checkbox](https://user-images.githubusercontent.com/74945210/153547842-0ef0327d-5fc9-4e9e-a1a9-fe1eb890230c.gif)
 
-A trendy skelton to display when loading data
+Checkboxes that are so cute, you can't help but press them.
 
-### drag gesture
-![swift_cheat_drag_gesture](https://user-images.githubusercontent.com/74945210/150670983-7f249801-23c0-4395-8397-c059f6e9813f.gif)
+### Frequently viewed page 1
 
-Make the navigation bar shrink when scrolling.
+![flutter_cheat_example1](https://user-images.githubusercontent.com/74945210/153547843-0eb3c01d-0cfd-4b99-b814-d46b60278801.gif)
 
-### lottie animation
+### Frequently viewed page 2
 
-![swift_cheat_lottie](https://user-images.githubusercontent.com/74945210/150670986-d2426bb9-a1e0-4467-9ffe-362d09774aca.gif)
+![flutter_cheat_example2](https://user-images.githubusercontent.com/74945210/153547845-623aa2d8-8f2f-4803-afd5-511e1aa7c2e3.gif)
 
-Using lottie makes it easy to implement animation.
+### popup
+![flutter_cheat_popup](https://user-images.githubusercontent.com/74945210/153547847-044cba86-7e13-4476-9670-78044a7edb20.gif)
 
-### radio button
-![swift_cheat_radio](https://user-images.githubusercontent.com/74945210/150670838-ee580961-75d9-411e-b2de-03c7e43ec289.gif)
+### wave
 
-Implemented because radio buttons are not provided.
+![flutter_cheat_wave](https://user-images.githubusercontent.com/74945210/153547848-79b1d02f-73bc-4b87-8092-05fde023eeda.gif)
 
-### Progressbar
-![swift_cheat_progress_bar](https://user-images.githubusercontent.com/74945210/150670856-9d41a5a2-0349-45fe-a07d-fd055ddc616e.gif)
-
-swiftui standard progressbar, etc.
-
+An animation that is often attached to people talking on a call chat application.
